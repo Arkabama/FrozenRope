@@ -1,9 +1,96 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>My GitHub Pages Site</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Home of the River City Sluggers adult men's slowpitch softball team." />
+    <title>River City Sluggers | Slowpitch Softball</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Hello from GitHub Pages!</h1>
-  </body>
-</html>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="River City Sluggers home">
+        <span class="brand-mark">RCS</span>
+        <span><strong>RIVER CITY</strong><small>SLOWPITCH SOFTBALL</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#schedule">Schedule</a>
+        <a href="#roster">Roster</a>
+        <a href="#updates">Updates</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Summer League 2026</p>
+          <h1>Built for big swings and late innings.</h1>
+          <p class="intro">Welcome to the home of the River City Sluggers. Follow the schedule, meet the crew, and catch every team update.</p>
+          <a class="button" href="#schedule">See the schedule <span aria-hidden="true">↓</span></a>
+        </div>
+        <aside class="next-game" aria-label="Next game">
+          <p class="eyebrow">Next game</p>
+          <p class="game-date">WED · AUG 12 · 7:15 PM</p>
+          <h2>Sluggers <span>vs.</span> Bat Flips</h2>
+          <p>Riverside Park · Diamond 3</p>
+          <a href="#schedule">Full schedule →</a>
+        </aside>
+      </section>
+
+      <section class="section" id="schedule">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Where to find us</p>
+            <h2>Game schedule</h2>
+          </div>
+          <p class="season-record">2026 record <strong>5–2</strong></p>
+        </div>
+        <div class="schedule-list" role="list">
+          <article class="game-card" role="listitem">
+            <time datetime="2026-08-05"><span>AUG</span><strong>05</strong><small>WED</small></time>
+            <div><p class="status win">W 18–12</p><h3>vs. Diamond Dogs</h3><p>Riverside Park · Diamond 1</p></div>
+            <p class="game-time">7:15 PM</p>
+          </article>
+          <article class="game-card featured" role="listitem">
+            <time datetime="2026-08-12"><span>AUG</span><strong>12</strong><small>WED</small></time>
+            <div><p class="status upcoming">UP NEXT</p><h3>vs. Bat Flips</h3><p>Riverside Park · Diamond 3</p></div>
+            <p class="game-time">7:15 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+            <time datetime="2026-08-19"><span>AUG</span><strong>19</strong><small>WED</small></time>
+            <div><p class="status upcoming">SCHEDULED</p><h3>vs. The Mashers</h3><p>Riverside Park · Diamond 2</p></div>
+            <p class="game-time">8:30 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+            <time datetime="2026-08-26"><span>AUG</span><strong>26</strong><small>WED</small></time>
+            <div><p class="status upcoming">SCHEDULED</p><h3>vs. Yard Goats</h3><p>Riverside Park · Diamond 1</p></div>
+            <p class="game-time">7:15 PM</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section roster-section" id="roster">
+        <div class="section-heading">
+          <div><p class="eyebrow">The lineup</p><h2>Meet the Sluggers</h2></div>
+          <p>13 players · 1 team</p>
+        </div>
+        <div class="roster-grid">
+          <article class="player"><span>01</span><h3>Mike Carter</h3><p>SS · Captain</p></article>
+          <article class="player"><span>07</span><h3>Jason Lee</h3><p>CF</p></article>
+          <article class="player"><span>09</span><h3>Rob Martinez</h3><p>3B</p></article>
+          <article class="player"><span>12</span><h3>Chris Nguyen</h3><p>LF</p></article>
+          <article class="player"><span>16</span><h3>Dan Wilson</h3><p>C</p></article>
+          <article class="player"><span>22</span><h3>Alex Brooks</h3><p>1B</p></article>
+          <article class="player"><span>27</span><h3>Kevin Price</h3><p>RF</p></article>
+          <article class="player"><span>33</span><h3>Ben Foster</h3><p>P</p></article>
+        </div>
+      </section>
+
+      <section class="section updates-section" id="updates">
+        <div class="section-heading">
+          <div><p class="eyebrow">From the dugout</p><h2>Team updates</h2></div>
+        </div>
+        <div class="updates-grid">
+          <article class="update lead-update">
+            <p class="update-date">AUGUST 6, 2026</p>
+            <h3>Sluggers put up 18 in another league win</h3>

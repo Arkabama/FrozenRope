@@ -43,7 +43,7 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   color: var(--black);
   text-decoration: none;
   letter-spacing: .04em;
@@ -63,17 +63,19 @@ body {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
-  width: 60px;
-  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
 }
 
 .brand-mark img {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  display: block;
 }
 
 nav {

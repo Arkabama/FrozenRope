@@ -37,7 +37,7 @@ body {
   gap: 24px;
   padding: 14px clamp(24px, 6vw, 88px);
   background: var(--white);
-  border-bottom: 1px solid var(--light-gray);
+  border-bottom: 1px solid var(--soft-gray);
 }
 
 .brand {
@@ -108,7 +108,7 @@ nav a:hover,
     clamp(24px, 9vw, 132px)
     74px;
 
-  color: var(--white);
+  color: var(--red);
 
   background:
     linear-gradient(

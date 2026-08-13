@@ -17,12 +17,13 @@
 }
 
 * {
-  box-sizing: border-box;
-}
+  box-sizing: border-box;}
 
-html {scroll-behavior: smooth;}
+html {
+  scroll-behavior: smooth;}
 
-body {margin: 0;
+body {
+  margin: 0;
   color: var(--black);
   background: var(--off-white);
   font-family: Arial, Helvetica, sans-serif;}
@@ -37,8 +38,7 @@ body {margin: 0;
   gap: 24px;
   padding: 14px clamp(24px, 6vw, 88px);
   background: var(--soft-red);
-  border-bottom: 1px solid var(--soft-gray);
-}
+  border-bottom: 1px solid var(--soft-gray);}
 
 .brand {
   display: flex;
@@ -47,20 +47,17 @@ body {margin: 0;
   color: var(--black);
   text-decoration: none;
   letter-spacing: .04em;
-  font-size: 12px;
-}
+  font-size: 12px;}
 
 .brand strong,
 .brand small {
-  display: block;
-}
+  display: block;}
 
 .brand small {
   margin-top: 2px;
   color: var(--gray);
   font-size: 9px;
-  letter-spacing: .12em;
-}
+  letter-spacing: .12em;}
 
 .brand-mark {
   display: flex;
@@ -68,32 +65,27 @@ body {margin: 0;
   justify-content: center;
   width: 80px;
   height: 80px;
-  flex-shrink: 0;
-}
+  flex-shrink: 0;}
 
 .brand-mark img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-}
+  object-fit: contain;}
 
 nav {
   display: flex;
-  gap: clamp(14px, 3vw, 34px);
-}
+  gap: clamp(14px, 3vw, 34px);}
 
 nav a {
   color: var(--black);
   font-size: 14px;
   font-weight: 700;
-  text-decoration: none;
-}
+  text-decoration: none;}
 
 nav a:hover,
 .update a:hover {
-  color: var(--red);
-}
+  color: var(--red);}
 
 /* HERO */
 
@@ -114,55 +106,46 @@ nav a:hover,
     linear-gradient(
       120deg,
       rgba(0, 0, 0, .96),
-      rgba(20, 20, 20, .82)
-    ),
+      rgba(20, 20, 20, .82)),
     radial-gradient(
       circle at 75% 20%,
       rgba(215, 25, 32, .55) 0 5%,
-      transparent 5.5%
-    ),
-    var(--black);
-}
+      transparent 5.5%),
+    var(--black);}
 
 .eyebrow {
   margin: 0 0 13px;
   color: var(--red);
   font-weight: 800;
   font-size: 11px;
-  letter-spacing: .16em;
-}
+  letter-spacing: .16em;}
 
 .hero .eyebrow {
-  color: var(--red);
-}
+  color: var(--red);}
 
 h1,
 h2,
 h3,
 p {
-  margin-top: 0;
-}
+  margin-top: 0;}
 
 h1,
 h2,
 h3 {
-  font-family: Georgia, "Times New Roman", serif;
-}
+  font-family: Georgia, "Times New Roman", serif;}
 
 h1 {
   max-width: 720px;
   margin-bottom: 22px;
   font-size: clamp(52px, 7vw, 100px);
   line-height: .91;
-  letter-spacing: -.055em;
-}
+  letter-spacing: -.055em;}
 
 .intro {
   max-width: 530px;
   color: var(--light-gray);
   line-height: 1.55;
-  font-size: 18px;
-}
+  font-size: 18px;}
 
 /* BUTTON */
 
@@ -179,102 +162,85 @@ h1 {
   font-size: 14px;
   transition:
     background .2s ease,
-    transform .2s ease;
-}
+    transform .2s ease;}
 
 .button:hover {
   background: var(--dark-red);
-  transform: translateY(-2px);
-}
+  transform: translateY(-2px);}
 
 .button span {
-  font-size: 19px;
-}
+  font-size: 19px;}
 
 /* NEXT GAME */
 
 .next-game {
   padding: 29px;
   border: 1px solid rgba(255, 255, 255, .3);
-  background: rgba(0, 0, 0, .58);
-}
+  background: rgba(0, 0, 0, .58);}
 
 .next-game .eyebrow {
-  margin-bottom: 25px;
-}
+  margin-bottom: 25px;}
 
 .game-date {
   margin-bottom: 8px;
   color: var(--light-gray);
   font-size: 12px;
   font-weight: bold;
-  letter-spacing: .09em;
-}
+  letter-spacing: .09em;}
 
 .next-game h2 {
   margin-bottom: 10px;
   font-size: 30px;
-  line-height: 1;
-}
+  line-height: 1;}
 
 .next-game h2 span {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
-  font-weight: normal;
-}
+  font-weight: normal;}
 
 .next-game p:not(.eyebrow):not(.game-date) {
   color: var(--light-gray);
-  font-size: 14px;
-}
+  font-size: 14px;}
 
 .next-game a {
   color: var(--red);
   font-weight: bold;
   font-size: 13px;
-  text-decoration: none;
-}
+  text-decoration: none;}
 
 .next-game a:hover {
-  color: var(--white);
-}
+  color: var(--white);}
 
 /* GENERAL SECTIONS */
 
 .section {
-  padding: 95px clamp(24px, 9vw, 132px);
-}
+  padding: 95px clamp(24px, 9vw, 132px);}
 
 .section-heading {
   display: flex;
   align-items: end;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 33px;
-}
+  margin-bottom: 33px;}
 
 .section-heading h2 {
   margin: 0;
   font-size: clamp(38px, 5vw, 62px);
   letter-spacing: -.045em;
-  line-height: .95;
-}
+  line-height: .95;}
 
 .section-heading > p {
   color: var(--gray);
-  font-size: 14px;
-}
+  font-size: 14px;}
 
 .season-record strong {
   color: var(--red);
-  font-size: 20px;
-}
+  font-size: 20px;}
 
 /* SCHEDULE */
 
 .schedule-list {
-  border-top: 1px solid var(--line);
-}
+  border-top: 1px solid var(--line);}
 
 .game-card {
   display: grid;
@@ -282,16 +248,14 @@ h1 {
   align-items: center;
   gap: 22px;
   padding: 22px 8px;
-  border-bottom: 1px solid var(--line);
-}
+  border-bottom: 1px solid var(--line);}
 
 .game-card.featured {
   margin-inline: -14px;
   padding-inline: 22px;
   background: var(--black);
   color: var(--white);
-  border-bottom-color: var(--dark-gray);
-}
+  border-bottom-color: var(--dark-gray);}
 
 .game-card time {
   display: flex;
@@ -301,109 +265,90 @@ h1 {
   width: 64px;
   height: 64px;
   border: 1px solid var(--line);
-  line-height: 1;
-}
+  line-height: 1;}
 
 .featured time {
-  border-color: var(--gray);
-}
+  border-color: var(--gray);}
 
 .game-card time span,
 .game-card time small {
   font-size: 9px;
   font-weight: bold;
-  letter-spacing: .08em;
-}
+  letter-spacing: .08em;}
 
 .game-card time strong {
   margin: 3px 0;
-  font-size: 26px;
-}
+  font-size: 26px;}
 
 .game-card h3 {
   margin: 4px 0 5px;
-  font-size: 23px;
-}
+  font-size: 23px;}
 
 .game-card div p:last-child {
   margin: 0;
   color: var(--gray);
-  font-size: 13px;
-}
+  font-size: 13px;}
 
 .featured div p:last-child {
-  color: var(--light-gray);
-}
+  color: var(--light-gray);}
 
 .status {
   margin: 0;
   color: var(--red);
   font-size: 10px;
   font-weight: 800;
-  letter-spacing: .1em;
-}
+  letter-spacing: .1em;}
 
 .status.win {
-  color: var(--black);
-}
+  color: var(--black);}
 
 .featured .status.win {
-  color: var(--white);
-}
+  color: var(--white);}
 
 .status.lose {
-  color: var(--red);
-}
+  color: var(--red);}
 
 .game-time {
   margin: 0;
   font-weight: bold;
   font-size: 14px;
-  white-space: nowrap;
-}
+  white-space: nowrap;}
 
 /* ROSTER */
 
 .roster-section {
-  background: var(--soft-gray);
-}
+  background: var(--soft-gray);}
 
 .roster-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
+  border-left: 1px solid var(--line);}
 
 .player {
-  min-height: 169px;
+  min-height: 150px;
   padding: 24px;
   background: var(--white);
   border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
+  border-bottom: 1px solid var(--line);}
 
 .player:nth-child(2n) {
-  background: var(--off-white);
-}
+  background: var(--off-white);}
 
 .player span {
   color: var(--red);
   font-weight: 900;
-  font-size: 13px;
-}
+  font-size: 13px;}
 
 .player h3 {
   margin: 43px 0 4px;
-  font-size: 22px;
-}
+  font-size: 22px;}
 
 .player p {
   margin: 0;
   color: var(--gray);
   font-size: 12px;
-  font-weight: bold;
-}
+  font-weight: bold;}
 
 /* UPDATES */
 
@@ -412,53 +357,44 @@ h1 {
   grid-template-columns: 1.45fr 1fr 1fr;
   gap: 1px;
   background: var(--line);
-  border: 1px solid var(--line);
-}
+  border: 1px solid var(--line);}
 
 .update {
-  min-height: 262px;
+  min-height: 225px;
   padding: 27px;
-  background: var(--white);
-}
+  background: var(--white);}
 
 .lead-update {
   background: var(--red);
-  color: var(--white);
-}
+  color: var(--white);}
 
 .update-date {
   color: var(--gray);
   font-size: 10px;
   font-weight: bold;
-  letter-spacing: .12em;
-}
+  letter-spacing: .12em;}
 
 .lead-update .update-date {
-  color: rgba(255, 255, 255, .78);
-}
+  color: rgba(255, 255, 255, .78);}
 
 .update h3 {
   margin-bottom: 15px;
   font-size: 28px;
-  line-height: 1.04;
-}
+  line-height: 1.04;}
 
 .update > p:not(.update-date) {
   color: var(--light-gray);
   font-size: 14px;
-  line-height: 1.45;
-}
+  line-height: 1.45;}
 
 .lead-update > p:not(.update-date) {
-  color: var(--white);
-}
+  color: var(--white);}
 
 .update a {
   color: inherit;
   font-size: 13px;
   font-weight: bold;
-  text-decoration: none;
-}
+  text-decoration: none;}
 
 /* CTA */
 
@@ -467,25 +403,21 @@ h1 {
   text-align: center;
   color: var(--white);
   background: var(--black);
-  border-top: 5px solid var(--red);
-}
+  border-top: 5px solid var(--red);}
 
 .cta .eyebrow {
-  color: var(--red);
-}
+  color: var(--red);}
 
 .cta h2 {
   margin-bottom: 15px;
   font-size: clamp(42px, 6vw, 72px);
-  letter-spacing: -.05em;
-}
+  letter-spacing: -.05em;}
 
 .cta p:last-child {
   max-width: 440px;
   margin: auto;
   color: var(--light-gray);
-  line-height: 1.5;
-}
+  line-height: 1.5;}
 
 /* FOOTER */
 
@@ -498,73 +430,58 @@ footer {
   background: #050505;
   border-top: 1px solid var(--dark-gray);
   font-size: 11px;
-  letter-spacing: .04em;
-}
+  letter-spacing: .04em;}
 
 /* MOBILE */
 
 @media (max-width: 760px) {
 
   .site-header {
-    padding-inline: 20px;
-  }
+    padding-inline: 20px;}
 
   nav {
-    gap: 16px;
-  }
+    gap: 16px;}
 
   nav a {
-    font-size: 12px;
-  }
+    font-size: 12px;}
 
   .hero {
     grid-template-columns: 1fr;
     gap: 48px;
     min-height: auto;
-    padding: 84px 24px 42px;
-  }
+    padding: 84px 24px 42px;}
 
   .next-game {
-    max-width: 500px;
-  }
+    max-width: 500px;}
 
   .section {
-    padding: 65px 24px;
-  }
+    padding: 65px 24px;}
 
   .roster-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    grid-template-columns: repeat(2, 1fr);}
 
   .updates-grid {
-    grid-template-columns: 1fr;
-  }
+    grid-template-columns: 1fr;}
 
   .game-card {
     grid-template-columns: 67px 1fr;
-    gap: 12px;
-  }
+    gap: 12px;}
 
   .game-time {
-    grid-column: 2;
-  }
+    grid-column: 2;}
 
   .game-card.featured {
     margin-inline: -8px;
-    padding-inline: 14px;
-  }
+    padding-inline: 14px;}
 
   .section-heading {
     align-items: start;
-    flex-direction: column;
-  }
+    flex-direction: column;}
 
   .section-heading > p {
-    margin-bottom: 0;
-  }
+    margin-bottom: 0;}
 
   footer {
-    flex-direction: column;
-  }
+    flex-direction: column;}
 }
 ```

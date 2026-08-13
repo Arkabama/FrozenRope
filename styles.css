@@ -194,7 +194,7 @@ h1 {
   font-weight: normal;}
 
 .next-game p:not(.eyebrow):not(.game-date) {
-  color: var(--gray);
+  color: var(--soft-gray);
   font-size: 14px;}
 
 .next-game a {

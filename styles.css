@@ -349,7 +349,7 @@ h1 {
 
 .updates-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1.1fr 1.1fr;
+  grid-template-columns: 1.45fr 1fr 1fr;
   gap: 1px;
   background: var(--line);
   border: 1px solid var(--line);}

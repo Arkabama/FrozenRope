@@ -1,106 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frozen Rope | Modern Slowpitch Softball</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Home of the Frozen Rope adult men's slowpitch softball team from Carson City, NV." />
+<!-- Edit the title here. -->
+    <title>Frozen Rope</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header class="site-header">
-        <div class="header-container">
-            <div class="logo"><span class="logo-accent">FROZEN</span>ROPE</div>
-            <nav class="main-nav">
-                <a href="#schedule">Schedule</a>
-                <a href="#roster">Roster</a>
-            </nav>
-        </div>
+      <a class="brand" href="#top" aria-label="Frozen Rope home">
+        <span class="brand-mark"><img src="frozenropelogo.png" alt="Frozen Rope"></span>
+        <span><strong>FROZEN ROPE</strong><small>SLOWPITCH SOFTBALL</small></span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#schedule">Schedule</a>
+        <a href="#roster">Roster</a>
+        <a href="#updates">News</a>
+      </nav>
     </header>
 
-    <main class="container">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <div class="hero-badge">Tuesday Men's League 2027</div>
-            <h1>Rope it. See you at the field.</h1>
-            <p>Welcome to the home of the Frozen Rope. Follow our schedule, meet the core lineup, and stay updated with every run this season.</p>
-        </section>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Tuesday Men's League 2027</p>
+<!-- Edit the main message here. -->
+          <h1>Frozen Rope Softball</h1>
+<!-- Edit the sub message here. -->
+          <p class="intro">Welcome to the home of the Frozen Rope. Follow the schedule, meet the team, and catch every team update.</p>
+<!-- Edit the schedule button here. -->
+        </div>
+        <aside class="next-game" aria-label="Next game">
+          <p class="eyebrow">Next Game</p>
+<!-- Edit the next game date here. -->
+          <p class="game-date">New Season Coming April 2027</p>
+<!-- Edit the next game participants here. -->      
+          <h2>Away Team <span>vs.</span> Home Team</h2>
+<!-- Edit the location (field) here. -->
+          <p>JohnD Winters Centennial Park, Field TBD</p>
+        </aside>
+      </section>
 
-        <!-- Next Game Featured Breakout Component -->
-        <section class="featured-section">
-            <h2 class="section-title">Next Action</h2>
-            <div class="game-card featured">
-                <time datetime="2027-04-27">
-                    <span>APR</span>
-                    <strong>27</strong>
-                    <small>TUE</small>
-                </time>
-                <div class="game-details">
-                    <span class="match-tag">SEASON OPENER</span>
-                    <h3>@ Home Team</h3>
-                    <p>Centennial Park • Field TBD</p>
-                </div>
-                <div class="game-time">6:30 PM</div>
-            </div>
-        </section>
+      <section class="section" id="schedule">
+        <div class="section-heading">
+          <div>
+            <h2>2027 Schedule</h2>
+          </div>
+          
+        </div>
+        <div class="schedule-list" role="list">
+<!-- *Edit the full schedule here. -->
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 1 date here. -->  
+            <time datetime="2027-04-27"><span>APR</span><strong>27</strong><small>TUE</small></time>
+        <!-- **Edit Game 1 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status upcoming" style="color: red;">April 27</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 1 time here. -->              
+            <p class="game-time">6:30 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 2 date here. -->  
+            <time datetime="2027-05-04"><span>MAY</span><strong>4</strong><small>TUE</small></time>
+        <!-- **Edit Game 2 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status win" style="color: darkgray;">May 4</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 2 time here. -->              
+            <p class="game-time">7:40 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 3 date here. -->  
+            <time datetime="2027-05-11"><span>MAY</span><strong>11</strong><small>TUE</small></time>
+        <!-- **Edit Game 3 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status lose" style="color: lightgray;">May 11</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 3 time here. -->              
+            <p class="game-time">8:50 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 4 date here. -->  
+            <time datetime="2027-05-18"><span>MAY</span><strong>18</strong><small>TUE</small></time>
+        <!-- **Edit Game 4 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status upcoming" style="color: red;">May 18</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 4 time here. -->              
+            <p class="game-time">6:30 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 5 date here. -->  
+            <time datetime="2027-06-01"><span>JUN</span><strong>1</strong><small>TUE</small></time>
+        <!-- **Edit Game 5 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status upcoming" style="color: red;">June 1</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 5 time here. -->              
+            <p class="game-time">7:40 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 6 date here. -->  
+            <time datetime="2027-06-08"><span>JUN</span><strong>8</strong><small>TUE</small></time>
+        <!-- **Edit Game 6 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status upcoming" style="color: red;">June 8</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 6 time here. -->              
+            <p class="game-time">8:50 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 7 date here. -->  
+            <time datetime="2027-06-15"><span>JUN</span><strong>15</strong><small>TUE</small></time>
+        <!-- **Edit Game 7 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status upcoming" style="color: red;">June 15</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 7 time here. -->              
+            <p class="game-time">8:50 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 8 date here. -->  
+            <time datetime="2027-06-22"><span>JUN</span><strong>22</strong><small>TUE</small></time>
+        <!-- **Edit Game 8 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status upcoming" style="color: red;">June 22 * Family Day</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 8 time here. -->              
+            <p class="game-time">6:30 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 9 date here. -->  
+            <time datetime="2027-06-29"><span>JUN</span><strong>29</strong><small>TUE</small></time>
+        <!-- **Edit Game 9 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status upcoming" style="color: red;">June 29</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 9 time here. -->              
+            <p class="game-time">7:40 PM</p>
+          </article>
+          <article class="game-card" role="listitem">
+<!-- **Edit Game 10 date here. -->  
+            <time datetime="2027-07-06"><span>JUL</span><strong>6</strong><small>TUE</small></time>
+        <!-- **Edit Game 10 status, opponent (@ or vs.), and field here. 'status win' 'status lose?' 'status upcoming'-->              
+            <div><p class="status upcoming" style="color: red;">July 6</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+        <!-- **Edit Game 10 time here. -->              
+            <p class="game-time">6:30 PM</p>
+          </article>
+        </div>
+      </section>
 
-        <!-- Schedule -->
-        <section id="schedule">
-            <h2 class="section-title">2027 Schedule</h2>
-            <div class="schedule-list">
-                <div class="game-card">
-                    <time datetime="2027-05-04"><span>MAY</span><strong>04</strong><small>TUE</small></time>
-                    <div class="game-details"><h3>vs Away Team</h3><p>Centennial Park • Field #</p></div>
-                    <div class="game-time">7:40 PM</div>
-                </div>
-                <div class="game-card">
-                    <time datetime="2027-05-11"><span>MAY</span><strong>11</strong><small>TUE</small></time>
-                    <div class="game-details"><h3>@ Home Team</h3><p>Centennial Park • Field #</p></div>
-                    <div class="game-time">8:50 PM</div>
-                </div>
-                <div class="game-card">
-                    <time datetime="2027-05-18"><span>MAY</span><strong>18</strong><small>TUE</small></time>
-                    <div class="game-details"><h3>vs Away Team</h3><p>Centennial Park • Field #</p></div>
-                    <div class="game-time">6:30 PM</div>
-                </div>
-            </div>
-        </section>
+      <section class="section roster-section" id="roster">
+        <div class="section-heading">
+          <div><h2>2027 Roster</h2></div>
+          <p style="font-size: 18px;"><strong>*Frozen Rope Original Members</strong></p>
+        </div>
+        <div class="roster-grid">
+<!-- Edit the roster here. -->
+          <article class="player"><span style="font-weight: bold; color: #f5deb3; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 28px;">#11</span><h3 style="font-weight: bold; color: #dc143c;">Jason Guiterrez*</h3><p>1B · Rope Hall of Fame 2014</p></article>
+          <article class="player"><span style="font-weight: bold; color: #f5deb3; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 28px;">#8</span><h3 style="font-weight: bold; color: #dc143c;">Tim Fowler*</h3><p>P · Rope Hall of Fame 2021</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#14</span><h3>Matt Bradley*</h3><p>1B · P</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#19</span><h3>Brad Breeden*</h3><p>SS</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#6</span><h3>Rick Garska</h3><p>2B · P</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#23</span><h3>Ron Hannah</h3><p>P</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#10</span><h3>Aaron Holmes</h3><p>OF</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#39</span><h3>Braeden Hudder</h3><p>OF</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#22</span><h3>Kris Kaufman*</h3><p>POS</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#28</span><h3>Jeff Klipp</h3><p>OF</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#9</span><h3>Phil Morelli*</h3><p>OF</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#4</span><h3>Phil Nemanic*</h3><p>3B</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#0</span><h3>Mike Scott*</h3><p>POS</p></article>
+          <article class="player"><span style="font-weight: bold; color: #ecc06e; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); font-size: 18px;">#0</span><h3>Player</h3><p>POS</p></article>
+        </div>
+      </section>
 
-        <!-- Roster Section -->
-        <section id="roster">
-            <h2 class="section-title">2027 Roster <span class="subtitle">*Original Members</span></h2>
-            <div class="roster-grid">
-                <div class="player HOF">
-                    <div class="player-num">#11</div>
-                    <h3>Jason Guiterrez*</h3>
-                    <p class="pos">1B</p>
-                    <span class="badge-hof">Hall of Fame</span>
-                </div>
-                <div class="player HOF">
-                    <div class="player-num">#8</div>
-                    <h3>Tim Fowler*</h3>
-                    <p class="pos">P</p>
-                    <span class="badge-hof">Hall of Fame</span>
-                </div>
-                <div class="player">
-                    <div class="player-num">#14</div>
-                    <h3>Matt Bradley*</h3>
-                    <p class="pos">1B • P</p>
-                </div>
-                <div class="player">
-                    <div class="player-num">#19</div>
-                    <h3>Brad Breeden*</h3>
-                    <p class="pos">SS</p>
-                </div>
-                <div class="player">
-                    <div class="player-num">#6</div>
-                    <h3>Rick Garska*</h3>
-                    <p class="pos">OF</p>
-                </div>
-            </div>
-        </section>
+      <section class="section updates-section" id="updates">
+        <div class="section-heading">
+          <div><h2>Latest from the Team</h2></div>
+        </div>
+        <div class="updates-grid">
+          <article class="update">          
+            <p class="update-date">AUGUST 6, 2026</p>
+            <h3>News Alpha</h3>
+            <p>I like to rock n' roll all night and *part* of every day. I usually have errands... I can only rock from like 1-3.</p>
+          </article>
+          <article class="update">
+            <p class="update-date">AUGUST 2, 2026</p>
+            <h3>News Bravo</h3>
+            <p>I like to rock n' roll all night and *part* of every day. I usually have errands... I can only rock from like 1-3.</p>
+          </article>
+          <article class="update">
+            <p class="update-date">JULY 27, 2026</p>
+            <h3>News Charlie</h3>
+            <p>I like to rock n' roll all night and *part* of every day. I usually have errands... I can only rock from like 1-3.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <p class="eyebrow">Rope it.</p>
+<!-- Edit the lower message here. -->
+        <h2>See you at the field.</h2>
+      </section>
     </main>
-</body>
+    <footer><span>© 2026 Frozen Rope</span><span>Adult Men's Slowpitch Softball</span></footer>
+  </body>
 </html>

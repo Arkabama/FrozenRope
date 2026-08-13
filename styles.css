@@ -9,12 +9,7 @@
   --soft-gray: #eeeeee;
   --white: #ffffff;
   --off-white: #f7f7f7;
-  --line: #c9c9c9;
-  --soft-red: #cd5c5c;
-  --green: #008000;
-  --yellow: #ffff00;
-  --orange: #ffa500;
-}
+  --line: #c9c9c9;}
 
 * {
   box-sizing: border-box;}
@@ -37,8 +32,8 @@ body {
   justify-content: space-between;
   gap: 24px;
   padding: 14px clamp(24px, 6vw, 88px);
-  background: var(--soft-red);
-  border-bottom: 1px solid var(--soft-gray);}
+  background: var(--red);
+  border-bottom: 1px solid var(--gray);}
 
 .brand {
   display: flex;
@@ -143,7 +138,7 @@ h1 {
 
 .intro {
   max-width: 530px;
-  color: var(--light-gray);
+  color: var(--gray);
   line-height: 1.55;
   font-size: 18px;}
 
@@ -165,7 +160,7 @@ h1 {
     transform .2s ease;}
 
 .button:hover {
-  background: var(--dark-red);
+  background: var(--red);
   transform: translateY(-2px);}
 
 .button span {
@@ -183,7 +178,7 @@ h1 {
 
 .game-date {
   margin-bottom: 8px;
-  color: var(--light-gray);
+  color: var(--gray);
   font-size: 12px;
   font-weight: bold;
   letter-spacing: .09em;}
@@ -199,7 +194,7 @@ h1 {
   font-weight: normal;}
 
 .next-game p:not(.eyebrow):not(.game-date) {
-  color: var(--light-gray);
+  color: var(--gray);
   font-size: 14px;}
 
 .next-game a {
@@ -255,7 +250,7 @@ h1 {
   padding-inline: 22px;
   background: var(--black);
   color: var(--white);
-  border-bottom-color: var(--dark-gray);}
+  border-bottom-color: var(--gray);}
 
 .game-card time {
   display: flex;
@@ -290,7 +285,7 @@ h1 {
   font-size: 13px;}
 
 .featured div p:last-child {
-  color: var(--light-gray);}
+  color: var(--gray);}
 
 .status {
   margin: 0;
@@ -317,7 +312,7 @@ h1 {
 /* ROSTER */
 
 .roster-section {
-  background: var(--soft-gray);}
+  background: var(--gray);}
 
 .roster-grid {
   display: grid;
@@ -383,7 +378,7 @@ h1 {
   line-height: 1.04;}
 
 .update > p:not(.update-date) {
-  color: var(--light-gray);
+  color: var(--gray);
   font-size: 14px;
   line-height: 1.45;}
 
@@ -416,7 +411,7 @@ h1 {
 .cta p:last-child {
   max-width: 440px;
   margin: auto;
-  color: var(--light-gray);
+  color: var(--gray);
   line-height: 1.5;}
 
 /* FOOTER */
@@ -428,7 +423,7 @@ footer {
   padding: 22px clamp(24px, 9vw, 132px);
   color: #050505;
   background: #cd5c5c;
-  border-top: 1px solid var(--dark-gray);
+  border-top: 1px solid var(--gray);
   font-size: 11px;
   letter-spacing: .04em;}
 

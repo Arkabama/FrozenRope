@@ -426,8 +426,8 @@ footer {
   justify-content: space-between;
   gap: 20px;
   padding: 22px clamp(24px, 9vw, 132px);
-  color: #aaaaaa;
-  background: #050505;
+  color: #050505;
+  background: #cd5c5c;
   border-top: 1px solid var(--dark-gray);
   font-size: 11px;
   letter-spacing: .04em;}

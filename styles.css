@@ -171,8 +171,8 @@ h1 {
 
 .next-game {
   padding: 29px;
-  border: 2px solid var(--gold);
-  background: rgba(169, 15, 21, .45);}
+  border: 2px solid var(--black);
+  background: rgba(255, 0, 0, .45);}
 
 .next-game .eyebrow {
   margin-bottom: 25px;}
@@ -275,7 +275,7 @@ h1 {
   letter-spacing: .08em;}
   
 .game-card time small {
-  color: #707070;
+  color: #d6d6d6;
   font-size: 9px;
   font-weight: bold;
   letter-spacing: .08em;}

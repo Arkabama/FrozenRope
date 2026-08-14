@@ -260,21 +260,26 @@ h1 {
   justify-content: center;
   width: 64px;
   height: 64px;
-  border: 1px solid var(--line);
+  background: var(--gold);
+  border: 1px solid var(--red);
   line-height: 1;}
 
 .featured time {
   border-color: var(--gray);}
 
-.game-card time span,
+.game-card time span {
+  color: var(--red);}
+  
 .game-card time small {
   font-size: 9px;
   font-weight: bold;
-  letter-spacing: .08em;}
+  letter-spacing: .08em;
+  color: var(--gray);}
 
 .game-card time strong {
   margin: 3px 0;
-  font-size: 26px;}
+  font-size: 26px;
+  color: var(--white);}
 
 .game-card h3 {
   margin: 4px 0 5px;

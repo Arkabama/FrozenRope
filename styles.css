@@ -260,8 +260,9 @@ h1 {
   justify-content: center;
   width: 70px !important;
   height: 70px !important;
-  background: var(--gold);
-  border: 2px solid var(--red);
+  background: yellow !important;
+  border: 5px solid blue !important;
+  border radius: 8px;
   line-height: 1;}
 
 .featured time {

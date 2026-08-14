@@ -172,7 +172,7 @@ h1 {
 .next-game {
   padding: 29px;
   border: 2px solid var(--red);
-  background: rgba(11, 11, 11, .85);}
+  background: rgba(11, 11, 11, .45);}
 
 .next-game .eyebrow {
   margin-bottom: 25px;}
@@ -254,14 +254,14 @@ h1 {
   border-bottom-color: var(--gray);}
 
 .game-card time {
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: 70px !important;
+  height: 70px !important;
   background: var(--gold);
-  border: 1px solid var(--red);
+  border: 2px solid var(--red);
   line-height: 1;}
 
 .featured time {

@@ -323,38 +323,61 @@ h1 {
 /* ROSTER */
 
 .roster-section {
-  background: var(--gray);}
+  background: var(--gray);
+}
 
 .roster-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);}
+  border-left: 1px solid var(--line);
+}
 
+/* PLAYER CARD */
 .player {
   min-height: 150px;
   padding: 24px;
   background: var(--white);
   border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);}
+  border-bottom: 1px solid var(--line);
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 
 .player:nth-child(2n) {
-  background: var(--off-white);}
+  background: var(--off-white);
+}
 
-.player span {
-  color: var(--red);
-  font-weight: 900;
-  font-size: 13px;}
+/* PLAYER LOGO */
+.player .brand-mark {
+  flex-shrink: 0;
+}
+
+.player .brand-mark img {
+  width: 70px;
+  height: auto;
+  display: block;
+}
+
+/* PLAYER INFORMATION */
+.player-info {
+  display: flex;
+  flex-direction: column;
+}
 
 .player h3 {
-  margin: 43px 0 4px;
-  font-size: 22px;}
+  margin: 0 0 4px 0;
+  font-size: 22px;
+}
 
 .player p {
   margin: 0;
   color: var(--gray);
   font-size: 12px;
-  font-weight: bold;}
+  font-weight: bold;
+}
 
 /* UPDATES */
 

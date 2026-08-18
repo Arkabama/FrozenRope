@@ -360,12 +360,18 @@ h1 {
 
 /* PLAYER LOGO */
 .player .brand-mark {
-  flex-shrink: 0;
+  width: 120px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .player .brand-mark img {
-  width: 90px;
-  height: auto;
+  max-width: 120px;
+  height: 90px;
+  width: auto;
+  object-fit: contain;
   display: block;
 }
 

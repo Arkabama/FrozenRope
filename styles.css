@@ -85,6 +85,14 @@ nav a:hover,
 
 /* HERO */
 
+.hero-logo {
+  display: block;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin: 0 0 24px 0;
+}
+
 .hero {
   min-height: 550px;
   display: grid;

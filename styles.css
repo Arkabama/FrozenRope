@@ -247,6 +247,10 @@ nav a:hover {
   text-decoration: none;
 }
 
+.next-game a:hover {
+  color: var(--white);
+}
+
 /* SECTIONS */
 .section {
   padding: clamp(55px, 7vw, 80px) clamp(24px, 9vw, 132px);
@@ -368,10 +372,6 @@ nav a:hover {
   background: #f1f1f1;
 }
 
-.final-game {
-  grid-column: 1 / -1;
-}
-
 /* RETIRED NUMBERS */
 .honors-section {
   color: var(--white);
@@ -419,14 +419,24 @@ nav a:hover {
 }
 
 .honoree .player-name {
+  margin-bottom: 8px;
   color: var(--red);
 }
 
-.honoree p {
+.honoree .retired-status {
+  margin: 0 0 6px;
+  color: var(--ice-blue);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .07em;
+}
+
+.honoree .honor-meta {
   margin: 0;
   color: var(--ice-blue-light);
   font-size: 12px;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 /* ROSTER */
@@ -686,10 +696,6 @@ footer {
     gap: 12px;
   }
 
-  .final-game {
-    grid-column: auto;
-  }
-
   .game-card {
     grid-template-columns: 70px minmax(0, 1fr);
     gap: 14px;
@@ -759,6 +765,23 @@ footer {
 
   .section {
     padding: 48px 18px;
+  }
+
+  .honoree {
+    align-items: flex-start;
+  }
+
+  .honoree-number {
+    width: 76px;
+  }
+
+  .honoree-number img {
+    max-width: 76px;
+    height: 66px;
+  }
+
+  .honoree .retired-status {
+    font-size: 10px;
   }
 
   .roster-grid {

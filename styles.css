@@ -2,26 +2,17 @@
   --black: #0b0b0b;
   --red: #d71920;
   --dark-red: #a90f15;
-
   --gray: #707070;
   --dark-gray: #333333;
   --light-gray: #d6d6d6;
   --soft-gray: #eeeeee;
-
   --white: #ffffff;
   --off-white: #f7f7f7;
-
-  /* ICE BLUE */
   --ice-blue: #9fe7ff;
   --ice-blue-light: #d7f6ff;
   --ice-blue-dark: #55bddd;
-
   --line: #c9c9c9;
 }
-
-/* ========================================
-   GLOBAL
-======================================== */
 
 * {
   box-sizing: border-box;
@@ -55,36 +46,30 @@ h3 {
   font-family: Georgia, "Times New Roman", serif;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ice-blue);
+  outline-offset: 4px;
+}
 
-/* ========================================
-   HEADER
-======================================== */
-
+/* HEADER */
 .site-header {
   min-height: 76px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   gap: 24px;
-
   padding: 10px clamp(24px, 6vw, 88px);
-
   background: var(--red);
-
   border-bottom: 1px solid var(--dark-red);
 }
 
 .brand {
   display: flex;
   align-items: center;
-
   gap: 14px;
-
-  color: var(--black);
+  color: var(--white);
   text-decoration: none;
-
   letter-spacing: .04em;
   font-size: 12px;
 }
@@ -100,9 +85,7 @@ h3 {
 
 .brand small {
   margin-top: 2px;
-
-  color: var(--black);
-
+  color: var(--white);
   font-size: 9px;
   letter-spacing: .12em;
 }
@@ -110,254 +93,107 @@ h3 {
 .brand-mark {
   width: 72px;
   height: 72px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
 }
 
 .brand-mark img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: contain;
 }
-
-
-/* ========================================
-   NAVIGATION
-======================================== */
 
 nav {
   display: flex;
   align-items: center;
-
   gap: clamp(14px, 3vw, 34px);
 }
 
 nav a {
-  color: var(--black);
-
+  color: var(--white);
   font-size: 14px;
   font-weight: 800;
-
   text-decoration: none;
 }
 
 nav a:hover {
-  color: var(--white);
+  color: var(--ice-blue-light);
 }
 
-
-/* ========================================
-   HERO
-======================================== */
-
+/* HERO */
 .hero {
   display: grid;
-
-  /*
-    LEFT = logo/welcome
-    RIGHT = next game
-  */
-  grid-template-columns:
-    minmax(0, 1.65fr)
-    minmax(300px, .75fr);
-
+  grid-template-columns: minmax(0, 1.65fr) minmax(300px, .75fr);
   align-items: center;
-
   gap: clamp(35px, 5vw, 70px);
-
-  padding:
-    clamp(45px, 6vw, 75px)
-    clamp(24px, 9vw, 132px);
-
+  padding: clamp(45px, 6vw, 75px) clamp(24px, 9vw, 132px);
   color: var(--white);
-
   background:
-    linear-gradient(
-      120deg,
-      rgba(0, 0, 0, .97),
-      rgba(20, 20, 20, .85)
-    ),
-
-    radial-gradient(
-      circle at 75% 20%,
-      rgba(215, 25, 32, .45) 0 5%,
-      transparent 5.5%
-    ),
-
+    linear-gradient(120deg, rgba(0, 0, 0, .97), rgba(20, 20, 20, .85)),
+    radial-gradient(circle at 75% 20%, rgba(215, 25, 32, .45) 0 5%, transparent 5.5%),
     var(--black);
 }
 
-
-/* ========================================
-   HERO LEFT SIDE
-======================================== */
-
 .hero-copy {
-  display: flex;
-  flex-direction: column;
-
   width: 100%;
 }
 
-
-/*
-   Your HTML currently has:
-
-   EYEBROW
-   LOGO
-   INTRO
-   BUTTON
-
-   These order rules visually change it to:
-
-   EYEBROW
-   INTRO
-   LOGO
-   BUTTON
-*/
-
-.hero-copy .eyebrow {
-  order: 1;
-}
-
-.hero-copy .intro {
-  order: 2;
-}
-
-.hero-copy .hero-logo {
-  order: 3;
-}
-
-.hero-copy .button {
-  order: 4;
-}
-
-
-/* ========================================
-   HERO EYEBROW
-======================================== */
-
 .eyebrow {
   margin: 0 0 12px;
-
   color: var(--red);
-
   font-weight: 900;
   font-size: 11px;
-
   letter-spacing: .16em;
   text-transform: uppercase;
 }
 
-.hero .eyebrow {
-  color: var(--red);
-}
-
-
-/* ========================================
-   WELCOME MESSAGE
-======================================== */
-
 .intro {
   max-width: 650px;
-
   margin: 0 0 20px;
-
   color: var(--light-gray);
-
   font-size: clamp(17px, 1.5vw, 21px);
   font-weight: 700;
-
   line-height: 1.45;
 }
 
-
-/* ========================================
-   MAIN HERO LOGO
-======================================== */
-
 .hero-logo {
   display: block;
-
   width: 100%;
   max-width: 650px;
-
   height: auto;
-
   margin: 0 0 22px;
 }
 
-
-/* ========================================
-   BUTTON
-======================================== */
-
 .button {
-  align-self: flex-start;
-
   display: inline-flex;
   align-items: center;
-
   gap: 18px;
-
   margin-top: 4px;
-
   padding: 14px 20px;
-
   color: var(--white);
   background: var(--red);
-
   text-decoration: none;
-
   font-weight: 800;
   font-size: 14px;
-
-  transition:
-    background .2s ease,
-    transform .2s ease;
+  transition: background .2s ease, transform .2s ease;
 }
 
 .button:hover {
   background: var(--dark-red);
-
   transform: translateY(-2px);
 }
-
-.button span {
-  font-size: 19px;
-}
-
-
-/* ========================================
-   NEXT GAME
-======================================== */
 
 .next-game {
   width: 100%;
   max-width: 420px;
-
   justify-self: end;
-
   padding: clamp(24px, 3vw, 34px);
-
   border: 2px solid var(--red);
-
-  background:
-    linear-gradient(
-      145deg,
-      rgba(255, 255, 255, .10),
-      rgba(255, 255, 255, .03)
-    );
-
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, .28);
+  background: linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
+  box-shadow: 0 20px 40px rgba(0,0,0,.28);
 }
 
 .next-game .eyebrow {
@@ -366,296 +202,245 @@ nav a:hover {
 
 .game-date {
   margin-bottom: 8px;
-
   color: var(--ice-blue);
-
   font-size: 12px;
   font-weight: 800;
-
   letter-spacing: .08em;
 }
 
 .next-game h2 {
   margin-bottom: 10px;
-
   color: var(--white);
-
   font-size: clamp(27px, 3vw, 34px);
-
   line-height: 1.05;
 }
 
 .next-game h2 span {
   font-family: Arial, Helvetica, sans-serif;
-
   font-size: 13px;
   font-weight: normal;
 }
 
 .next-game p:not(.eyebrow):not(.game-date) {
   margin-bottom: 18px;
-
   color: var(--light-gray);
-
   font-size: 14px;
-
   line-height: 1.45;
 }
 
 .next-game a {
   color: var(--ice-blue);
-
   font-weight: 800;
   font-size: 13px;
-
   text-decoration: none;
 }
 
-.next-game a:hover {
-  color: var(--white);
-}
-
-
-/* ========================================
-   GENERAL SECTIONS
-======================================== */
-
+/* SECTIONS */
 .section {
-  padding:
-    clamp(55px, 7vw, 80px)
-    clamp(24px, 9vw, 132px);
+  padding: clamp(55px, 7vw, 80px) clamp(24px, 9vw, 132px);
 }
 
 .section-heading {
   display: flex;
-
   align-items: flex-end;
   justify-content: space-between;
-
   gap: 24px;
-
   margin-bottom: 32px;
 }
 
 .section-heading h2 {
   margin: 0;
-
   font-size: clamp(38px, 5vw, 62px);
-
   letter-spacing: -.045em;
   line-height: .95;
 }
 
 .section-heading > p {
   margin-bottom: 0;
-
   color: var(--gray);
-
   font-size: 14px;
 }
 
-
-/* ========================================
-   SCHEDULE
-======================================== */
-
-#schedule {
+/* SCHEDULE */
+.schedule-section {
   background: var(--off-white);
 }
 
-
-/*
-   TWO-COLUMN SCHEDULE
-*/
-
 .schedule-list {
   display: grid;
-
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
-
-  border: 0;
 }
-
-
-/* ========================================
-   GAME CARDS
-======================================== */
 
 .game-card {
   display: grid;
-
-  grid-template-columns:
-    78px
-    minmax(0, 1fr)
-    auto;
-
+  grid-template-columns: 78px minmax(0, 1fr) auto;
   align-items: center;
-
   gap: 18px;
-
   min-height: 118px;
-
   padding: 18px;
-
   background: var(--white);
-
   border: 1px solid var(--line);
-
-  box-shadow:
-    0 4px 12px rgba(0, 0, 0, .04);
+  box-shadow: 0 4px 12px rgba(0,0,0,.04);
+  transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
 }
 
 .game-card:hover {
+  transform: translateY(-2px);
   border-color: var(--red);
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
 }
-
-
-/* ========================================
-   DATE BOX
-======================================== */
 
 .game-card time {
   width: 70px;
   height: 70px;
-
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
   justify-content: center;
-
   background: var(--black);
-
   border: 2px solid var(--red);
   border-radius: 6px;
-
   line-height: 1;
 }
 
 .game-card time span {
   color: var(--red);
-
   font-size: 10px;
   font-weight: 900;
-
   letter-spacing: .08em;
 }
 
 .game-card time strong {
   margin: 4px 0;
-
   color: var(--white);
-
   font-size: 28px;
   font-weight: 900;
 }
 
 .game-card time small {
   color: var(--light-gray);
-
   font-size: 9px;
   font-weight: 800;
-
   letter-spacing: .08em;
 }
 
-
-/* ========================================
-   GAME INFORMATION
-======================================== */
-
 .game-card h3 {
   margin: 4px 0 5px;
-
   font-size: 21px;
 }
 
 .game-card div p:last-child {
   margin: 0;
-
   color: var(--gray);
-
   font-size: 12px;
 }
 
 .status {
   margin: 0;
-
   color: var(--red);
-
   font-size: 10px;
   font-weight: 900;
-
   letter-spacing: .1em;
-}
-
-.status.win {
-  color: var(--black);
-}
-
-.status.lose {
-  color: var(--red);
 }
 
 .game-time {
   margin: 0;
-
   color: var(--black);
-
   font-size: 13px;
   font-weight: 900;
-
   white-space: nowrap;
 }
 
+.bye-game {
+  background: #f1f1f1;
+}
 
-/* ========================================
-   ROSTER
-======================================== */
+.final-game {
+  grid-column: 1 / -1;
+}
 
+/* RETIRED NUMBERS */
+.honors-section {
+  color: var(--white);
+  background: linear-gradient(135deg, #111, #222);
+  border-top: 4px solid var(--red);
+  border-bottom: 4px solid var(--red);
+}
+
+.honors-heading > p {
+  color: var(--ice-blue);
+  font-weight: 800;
+}
+
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.honoree {
+  min-height: 170px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.16);
+}
+
+.honoree-number {
+  width: 92px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.honoree-number img {
+  display: block;
+  width: auto;
+  max-width: 92px;
+  height: 78px;
+  object-fit: contain;
+}
+
+.honoree .player-name {
+  color: var(--red);
+}
+
+.honoree p {
+  margin: 0;
+  color: var(--ice-blue-light);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ROSTER */
 .roster-section {
   background: var(--gray);
 }
 
-.roster-section .section-heading h2 {
-  color: var(--white);
-}
-
+.roster-section .section-heading h2,
 .roster-section .section-heading > p {
   color: var(--white);
 }
 
 .roster-grid {
   display: grid;
-
-  grid-template-columns:
-    repeat(4, minmax(0, 1fr));
-
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 
-
-/* ========================================
-   PLAYER CARD
-======================================== */
-
 .player {
   min-height: 145px;
-
   display: flex;
   align-items: center;
-
   gap: 15px;
-
   padding: 20px;
-
   background: var(--white);
-
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -664,90 +449,59 @@ nav a:hover {
   background: var(--off-white);
 }
 
-
-/* ========================================
-   PLAYER NUMBER IMAGE
-======================================== */
-
-.player .brand-mark {
+.player-number {
   width: 80px;
   height: 65px;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
 }
 
-.player .brand-mark img {
+.player-number img {
   display: block;
-
   width: auto;
-  height: 60px;
-
   max-width: 80px;
-
+  height: 60px;
   object-fit: contain;
 }
-
-
-/* ========================================
-   PLAYER INFORMATION
-======================================== */
 
 .player-info {
   display: flex;
   flex-direction: column;
-
   min-width: 0;
 }
 
-.player h3 {
+.player-name {
   margin: 0 0 4px;
-
+  color: var(--black);
   font-size: 20px;
+  font-weight: 700;
 }
 
 .player p {
   margin: 0;
-
   color: var(--gray);
-
   font-size: 12px;
   font-weight: bold;
 }
 
-
-/* ========================================
-   UPDATES
-======================================== */
-
+/* UPDATES */
 .updates-section {
   background: var(--off-white);
 }
 
 .updates-grid {
   display: grid;
-
-  grid-template-columns:
-    1.45fr
-    1fr
-    1fr;
-
+  grid-template-columns: 1.45fr 1fr 1fr;
   gap: 1px;
-
   background: var(--line);
-
   border: 1px solid var(--line);
 }
 
 .update {
   min-height: 225px;
-
   padding: 27px;
-
   background: var(--white);
 }
 
@@ -758,30 +512,24 @@ nav a:hover {
 
 .update-date {
   color: var(--gray);
-
   font-size: 10px;
   font-weight: bold;
-
   letter-spacing: .12em;
 }
 
 .lead-update .update-date {
-  color: rgba(255, 255, 255, .8);
+  color: rgba(255,255,255,.8);
 }
 
 .update h3 {
   margin-bottom: 15px;
-
   font-size: 28px;
-
   line-height: 1.04;
 }
 
 .update > p:not(.update-date) {
   color: var(--gray);
-
   font-size: 14px;
-
   line-height: 1.45;
 }
 
@@ -789,113 +537,49 @@ nav a:hover {
   color: var(--white);
 }
 
-.update a {
-  color: inherit;
-
-  font-size: 13px;
-  font-weight: bold;
-
-  text-decoration: none;
-}
-
-
-/* ========================================
-   CTA
-======================================== */
-
+/* CTA + FOOTER */
 .cta {
   padding: 70px 24px;
-
   text-align: center;
-
   color: var(--white);
-
   background: var(--black);
-
   border-top: 5px solid var(--red);
-}
-
-.cta .eyebrow {
-  color: var(--red);
 }
 
 .cta h2 {
   margin-bottom: 15px;
-
   font-size: clamp(42px, 6vw, 72px);
-
   letter-spacing: -.05em;
 }
 
 .cta p:last-child {
   max-width: 440px;
-
   margin: auto;
-
   color: var(--gray);
-
   line-height: 1.5;
 }
 
-
-/* ========================================
-   FOOTER — ICE BLUE
-======================================== */
-
 footer {
   display: flex;
-
   justify-content: space-between;
   align-items: center;
-
   gap: 20px;
-
-  padding:
-    22px
-    clamp(24px, 9vw, 132px);
-
+  padding: 22px clamp(24px, 9vw, 132px);
   color: var(--black);
-
-  background:
-    linear-gradient(
-      135deg,
-      var(--ice-blue-light),
-      var(--ice-blue)
-    );
-
+  background: linear-gradient(135deg, var(--ice-blue-light), var(--ice-blue));
   border-top: 3px solid var(--ice-blue-dark);
-
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: .04em;
 }
 
-
-/* ========================================
-   TABLET
-======================================== */
-
+/* TABLET */
 @media (max-width: 1000px) {
-
-  /* HERO */
-
   .hero {
-    grid-template-columns:
-      minmax(0, 1.35fr)
-      minmax(280px, .75fr);
-
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, .75fr);
     gap: 32px;
-
     padding-inline: 40px;
   }
-
-  .hero-logo {
-    max-width: 560px;
-  }
-
-
-  /* SCHEDULE */
 
   .game-card {
     grid-template-columns: 70px 1fr;
@@ -903,20 +587,16 @@ footer {
 
   .game-time {
     grid-column: 2;
-
     margin-top: 4px;
   }
 
-
-  /* ROSTER */
-
-  .roster-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+  .honors-grid {
+    grid-template-columns: 1fr;
   }
 
-
-  /* UPDATES */
+  .roster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 
   .updates-grid {
     grid-template-columns: 1fr 1fr;
@@ -927,24 +607,13 @@ footer {
   }
 }
 
-
-/* ========================================
-   MOBILE
-======================================== */
-
+/* MOBILE */
 @media (max-width: 760px) {
-
-  /* HEADER */
-
   .site-header {
     min-height: auto;
-
     flex-direction: column;
-
     align-items: stretch;
-
     gap: 8px;
-
     padding: 10px 18px 14px;
   }
 
@@ -959,65 +628,23 @@ footer {
 
   nav {
     justify-content: center;
-
     gap: 24px;
-
-    padding-top: 4px;
   }
 
   nav a {
     font-size: 12px;
   }
 
-
-  /* HERO */
-
   .hero {
     grid-template-columns: 1fr;
-
     gap: 32px;
-
     padding: 45px 24px;
   }
 
-  .hero-copy {
-    width: 100%;
-  }
-
-  .intro {
-    margin-bottom: 18px;
-
-    font-size: 17px;
-  }
-
-  .hero-logo {
-    width: 100%;
-    max-width: 520px;
-
-    margin-bottom: 18px;
-  }
-
-  .button {
-    width: fit-content;
-  }
-
-
-  /*
-    NEXT GAME MOVES BELOW THE LOGO
-    ON MOBILE
-  */
-
   .next-game {
     justify-self: stretch;
-
-    width: 100%;
     max-width: none;
-
-    padding: 24px;
   }
-
-
-  /* GENERAL SECTIONS */
 
   .section {
     padding: 55px 24px;
@@ -1025,73 +652,58 @@ footer {
 
   .section-heading {
     flex-direction: column;
-
     align-items: flex-start;
-
     gap: 12px;
-
     margin-bottom: 25px;
   }
 
-
-  /* SCHEDULE — ONE COLUMN MOBILE */
-
   .schedule-list {
     grid-template-columns: 1fr;
-
     gap: 12px;
   }
 
+  .final-game {
+    grid-column: auto;
+  }
+
   .game-card {
-    grid-template-columns:
-      70px
-      minmax(0, 1fr);
-
+    grid-template-columns: 70px minmax(0, 1fr);
     gap: 14px;
-
     min-height: 105px;
-
     padding: 15px;
   }
 
   .game-time {
     grid-column: 2;
-
-    margin-top: 2px;
   }
 
-
-  /* ROSTER */
+  .honoree {
+    min-height: 140px;
+  }
 
   .roster-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .player {
     min-height: 135px;
-
     padding: 16px;
-
     gap: 10px;
   }
 
-  .player .brand-mark {
+  .player-number {
     width: 65px;
     height: 58px;
   }
 
-  .player .brand-mark img {
+  .player-number img {
     max-width: 65px;
     height: 54px;
   }
 
-  .player h3 {
+  .player-name {
     font-size: 18px;
   }
-
-
-  /* UPDATES */
 
   .updates-grid {
     grid-template-columns: 1fr;
@@ -1101,27 +713,14 @@ footer {
     grid-column: auto;
   }
 
-
-  /* FOOTER */
-
   footer {
     flex-direction: column;
-
-    align-items: center;
-
     text-align: center;
-
     padding: 22px 20px;
   }
 }
 
-
-/* ========================================
-   SMALL PHONES
-======================================== */
-
 @media (max-width: 480px) {
-
   nav {
     gap: 15px;
   }
@@ -1138,17 +737,6 @@ footer {
     padding: 48px 18px;
   }
 
-  .intro {
-    font-size: 16px;
-  }
-
-  .next-game h2 {
-    font-size: 26px;
-  }
-
-
-  /* ROSTER — ONE CARD PER ROW */
-
   .roster-grid {
     grid-template-columns: 1fr;
   }
@@ -1156,9 +744,6 @@ footer {
   .player {
     min-height: 110px;
   }
-
-
-  /* GAME CARD */
 
   .game-card {
     grid-template-columns: 62px 1fr;
@@ -1175,5 +760,19 @@ footer {
 
   .game-card h3 {
     font-size: 19px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

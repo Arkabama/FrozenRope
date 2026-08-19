@@ -588,7 +588,7 @@ nav a:hover {
 .cta p:last-child {
   max-width: 440px;
   margin: auto;
-  color: var(--gray);
+  color: var(--light-gray);
   line-height: 1.5;
 }
 

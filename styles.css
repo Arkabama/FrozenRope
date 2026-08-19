@@ -571,6 +571,14 @@ nav a:hover {
   border-top: 5px solid var(--red);
 }
 
+.cta-logo {
+  display: block;
+  width: 92px;
+  height: 92px;
+  margin: 0 auto 14px;
+  object-fit: contain;
+}
+
 .cta h2 {
   margin-bottom: 15px;
   font-size: clamp(42px, 6vw, 72px);
@@ -582,6 +590,17 @@ nav a:hover {
   margin: auto;
   color: var(--gray);
   line-height: 1.5;
+}
+
+.cta p:last-child a {
+  color: var(--ice-blue);
+  font-weight: 800;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.cta p:last-child a:hover {
+  color: var(--white);
 }
 
 footer {
@@ -778,6 +797,11 @@ footer {
   .honoree-number {
     width: 96px;
     height: 86px;
+  }
+
+  .cta-logo {
+    width: 80px;
+    height: 80px;
   }
 
   .roster-grid {

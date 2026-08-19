@@ -3,25 +3,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Home of the Frozen Rope adult men's slowpitch softball club from Carson City, NV." />
+    <meta name="description" content="Home of the Frozen Rope adult men's slowpitch softball club from Carson City, Nevada." />
+    <meta name="theme-color" content="#d71920" />
 
-<!--EDIT TITLE HERE-->
+    <title>Frozen Rope Softball Club | Carson City, Nevada</title>
 
-    <title>Frozen Rope</title>
+    <meta property="og:title" content="Frozen Rope Softball Club" />
+    <meta property="og:description" content="Home of the Frozen Rope adult men's slowpitch softball club from Carson City, Nevada." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://arkabama.github.io/FrozenRope/" />
+    <meta property="og:image" content="https://arkabama.github.io/FrozenRope/frozenrope.logomain.png" />
+
+    <link rel="icon" type="image/png" href="frozenrope.logoalt.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Frozen Rope home">
-
-<!--EDIT LOGO HERE-->
-
-        <span class="brand-mark"><img src="frozenrope.logoalt.png" alt="Frozen Rope"></span>
-        
-<!--EDIT LOGO TEXT HERE-->
-
-      <span><strong>FROZEN ROPE</strong><small>SLOWPITCH SOFTBALL</small></span>
+        <span class="brand-mark">
+          <img src="frozenrope.logoalt.png" alt="" />
+        </span>
+        <span class="brand-copy">
+          <strong>FROZEN ROPE</strong>
+          <small>SLOWPITCH SOFTBALL</small>
+        </span>
       </a>
+
       <nav aria-label="Primary navigation">
         <a href="#schedule">Schedule</a>
         <a href="#roster">Roster</a>
@@ -30,325 +38,374 @@
     </header>
 
     <main id="top">
-      <section class="hero">
+      <section class="hero" aria-labelledby="hero-welcome">
         <div class="hero-copy">
           <p class="eyebrow">Tuesday Men's League 2027</p>
 
-<!--EDIT MAIN MESSAGE HERE-->
+          <p class="intro" id="hero-welcome">
+            Welcome to the home of the Frozen Rope Softball Club.
+          </p>
 
-          <img src="frozenrope.logomain.png" alt="Frozen Rope Softball" class="hero-logo">
+          <img
+            src="frozenrope.logomain.png"
+            alt="Frozen Rope Softball"
+            class="hero-logo"
+            fetchpriority="high"
+          />
 
-<!--EDIT SUB MESSAGE HERE-->
-
-          <p class="intro">Welcome to the home of the Frozen Rope Softball Club.</p>
-
-<!--EDIT SCHEDULE BUTTON-->
-          <a class="button" href="#schedule">2027 Schedule <span aria-hidden="true">↓</span></a>
+          <a class="button" href="#schedule">
+            2027 Schedule <span aria-hidden="true">↓</span>
+          </a>
         </div>
-        <aside class="next-game" aria-label="Next game"><p class="eyebrow">Next Game</p>
 
-<!--EDIT NEXT GAME INFO HERE-->
-
-          <p class="game-date">New Season Coming April 2027</p>      
+        <aside class="next-game" aria-label="Next game">
+          <p class="eyebrow">Next Game</p>
+          <p class="game-date">New Season Coming April 2027</p>
           <h2>Away Team <span>vs.</span> Home Team</h2>
           <p>JohnD Winters Centennial Park, Field TBD</p>
           <a href="#schedule">Full schedule →</a>
         </aside>
       </section>
 
-<!--SCHEDULE SECTION * SCHEDULE SECTION * SCHEDULE SECTION-->
-
-        <section class="section" id="schedule">
+      <section class="section schedule-section" id="schedule" aria-labelledby="schedule-heading">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Where to find us</p>
-            <h2>2027 Schedule</h2>
+            <h2 id="schedule-heading">2027 Schedule</h2>
           </div>
-          
         </div>
+
         <div class="schedule-list" role="list">
-
-<!--EDIT THE FULL SCHEDULE HERE-->
-
           <article class="game-card" role="listitem">
-
-<!--EDIT WEEK 1 HERE-->
-
-            <time datetime="2027-04-27"><span>APR</span><strong>27</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 1 · SCHEDULED</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+            <time datetime="2027-04-27">
+              <span>APR</span><strong>27</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 1 · SCHEDULED</p>
+              <h3>@ Home Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">6:30 PM</p>
           </article>
-         <article class="game-card" role="listitem">
 
-<!--EDIT WEEK 2 HERE-->
-
-            <time datetime="2027-05-04"><span>MAY</span><strong>4</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 2 · SCHEDULED</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+          <article class="game-card" role="listitem">
+            <time datetime="2027-05-04">
+              <span>MAY</span><strong>4</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 2 · SCHEDULED</p>
+              <h3>vs Away Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">7:40 PM</p>
           </article>
-         <article class="game-card" role="listitem">
 
-<!--EDIT WEEK 3 HERE-->
-
-            <time datetime="2027-05-11"><span>MAY</span><strong>11</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 3 · SCHEDULED</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+          <article class="game-card" role="listitem">
+            <time datetime="2027-05-11">
+              <span>MAY</span><strong>11</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 3 · SCHEDULED</p>
+              <h3>vs Away Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">8:50 PM</p>
-           </article>
+          </article>
+
+          <article class="game-card bye-game" role="listitem">
+            <time datetime="2027-05-18">
+              <span>MAY</span><strong>18</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 4 · BYE WEEK</p>
+              <h3>No Game</h3>
+              <p>Week off</p>
+            </div>
+            <p class="game-time">—</p>
+          </article>
+
           <article class="game-card" role="listitem">
-
-<!--EDIT WEEK 4 HERE-->
-
-            <time datetime="2027-05-18"><span>MAY</span><strong>18</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 4 · BYE WEEK</p><h3>No Game</h3><p> </p></div>
-            <p class="game-time"> </p>
-           </article>
-          <article class="game-card" role="listitem">
-
-<!--EDIT WEEK 5 HERE-->
-
-            <time datetime="2027-05-25"><span>MAY</span><strong>25</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 5 · SCHEDULED</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+            <time datetime="2027-05-25">
+              <span>MAY</span><strong>25</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 5 · SCHEDULED</p>
+              <h3>vs Away Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">8:50 PM</p>
-           </article>
+          </article>
+
           <article class="game-card" role="listitem">
-
-<!--EDIT WEEK 6 HERE-->
-
-            <time datetime="2027-06-01"><span>JUN</span><strong>1</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 6 · SCHEDULED</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+            <time datetime="2027-06-01">
+              <span>JUN</span><strong>1</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 6 · SCHEDULED</p>
+              <h3>@ Home Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">6:30 PM</p>
-           </article>
+          </article>
+
           <article class="game-card" role="listitem">
-
-<!--EDIT WEEK 7 HERE-->
-
-            <time datetime="2027-06-08"><span>JUN</span><strong>8</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 7 · SCHEDULED</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+            <time datetime="2027-06-08">
+              <span>JUN</span><strong>8</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 7 · SCHEDULED</p>
+              <h3>@ Home Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">7:40 PM</p>
-           </article>
+          </article>
+
           <article class="game-card" role="listitem">
-
-<!--EDIT WEEK 8 HERE-->
-
-            <time datetime="2027-06-15"><span>JUN</span><strong>15</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 8 · SCHEDULED</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+            <time datetime="2027-06-15">
+              <span>JUN</span><strong>15</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 8 · SCHEDULED</p>
+              <h3>vs Away Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">6:30 PM</p>
-           </article>
+          </article>
+
           <article class="game-card" role="listitem">
-
-<!--EDIT WEEK 9 HERE-->
-
-            <time datetime="2027-06-22"><span>JUN</span><strong>22</strong><small>TUE</small></time>
-            <div><p class="status win">WEEK 9 · SCHEDULED</p><h3>vs Away Team</h3><p>Centennial Park · Field # </p>
-            </div><p class="game-time">7:40 PM</p>
-           </article>
-          <article class="game-card" role="listitem">
-
-<!--EDIT WEEK 10 HERE-->
-
-            <time datetime="2027-06-29"><span>JUN</span><strong>29</strong><small>TUE</small></time>
-            <div><p class="status lose">WEEK 10 · SCHEDULED</p><h3>@ Home Team</h3><p>Centennial Park · Field #</p></div>
+            <time datetime="2027-06-22">
+              <span>JUN</span><strong>22</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 9 · SCHEDULED</p>
+              <h3>vs Away Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">7:40 PM</p>
-           </article>
+          </article>
+
           <article class="game-card" role="listitem">
+            <time datetime="2027-06-29">
+              <span>JUN</span><strong>29</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 10 · SCHEDULED</p>
+              <h3>@ Home Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
+            <p class="game-time">7:40 PM</p>
+          </article>
 
-<!--EDIT WEEK 11 HERE-->
-
-            <time datetime="2027-07-06"><span>JUL</span><strong>6</strong><small>TUE</small></time>
-            <div><p class="status upcoming">WEEK 11 · SCHEDULED</p><h3>vs Away Team</h3><p>Centennial Park · Field #</p></div>
+          <article class="game-card final-game" role="listitem">
+            <time datetime="2027-07-06">
+              <span>JUL</span><strong>6</strong><small>TUE</small>
+            </time>
+            <div>
+              <p class="status upcoming">WEEK 11 · SCHEDULED</p>
+              <h3>vs Away Team</h3>
+              <p>Centennial Park · Field #</p>
+            </div>
             <p class="game-time">8:50 PM</p>
           </article>
         </div>
       </section>
 
-<!--ROSTER SECTION * ROSTER SECTION * ROSTER SECTION-->
-
-      <section class="section roster-section" id="roster">
-        <div class="section-heading">
-          <div><p class="eyebrow">2027 Roster</p><h2>2027 Roster</h2></div>
-          <p style="font-size: 18px;"><strong>*Rope Originals</strong></p>
+      <section class="section honors-section" id="honors" aria-labelledby="honors-heading">
+        <div class="section-heading honors-heading">
+          <div>
+            <p class="eyebrow">Forever Frozen</p>
+            <h2 id="honors-heading">Retired Numbers</h2>
+          </div>
+          <p>Rope Hall of Fame · Class of 2026</p>
         </div>
+
+        <div class="honors-grid">
+          <article class="honoree">
+            <span class="honoree-number">
+              <img src="frozenrope.08b.png" alt="Retired number 8" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Tim Fowler*</h3>
+              <p>Rope Hall of Fame 2026</p>
+            </div>
+          </article>
+
+          <article class="honoree">
+            <span class="honoree-number">
+              <img src="frozenrope.11b.png" alt="Retired number 11" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Jason Guiterrez*</h3>
+              <p>Rope Hall of Fame 2026</p>
+            </div>
+          </article>
+
+          <article class="honoree">
+            <span class="honoree-number">
+              <img src="frozenrope.13b.png" alt="Retired number 13" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Troy Alfonso*</h3>
+              <p>Rope Hall of Fame 2026</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section roster-section" id="roster" aria-labelledby="roster-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">2027 Roster</p>
+            <h2 id="roster-heading">2027 Roster</h2>
+          </div>
+          <p class="roster-note"><strong>*Rope Originals</strong></p>
+        </div>
+
         <div class="roster-grid">
-
-<!--RETIRED JERSEY 1-->
-          
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.08b.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #dc143c;">Tim Fowler*</h3>
-          <p>Rope Hall of Fame 2026</p>
-          </div>
-          </article>
-          
-<!--RETIRED JERSEY 2-->
-
-          <article class="player">
-          <span class="brand-mark"><img src="frozenrope.11b.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #dc143c;">Jason Guiterrez*</h3>
-          <p>Rope Hall of Fame 2026</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.02.png" alt="Number 2" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Matt Bradley*</h3>
+              <p>1B · P</p>
+            </div>
           </article>
 
-<!--RETIRED JERSEY 3-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.13b.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #dc143c;">Troy Alfonso*</h3>
-          <p>Rope Hall of Fame 2026</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.19.png" alt="Number 19" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Brad Breeden*</h3>
+              <p>SS</p>
+            </div>
           </article>
 
-<!--PLAYER 1-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.02.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Matt Bradley*</h3>
-          <p>1B · P</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.06.png" alt="Number 6" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Rick Garska</h3>
+              <p>2B · P</p>
+            </div>
           </article>
 
-<!--PLAYER 2-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.19.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Brad Breeden*</h3>
-          <p>SS</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.23.png" alt="Number 23" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Ron Hannah</h3>
+              <p>P</p>
+            </div>
           </article>
 
-<!--PLAYER 3-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.06.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Rick Garska</h3>
-          <p>2B · P</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.10.png" alt="Number 10" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Aaron Holmes</h3>
+              <p>1B</p>
+            </div>
           </article>
 
-<!--PLAYER 4-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.23.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Ron Hannah</h3>
-          <p>P</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.39.png" alt="Number 39" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Braeden Hudder</h3>
+              <p>OF</p>
+            </div>
           </article>
 
-<!--PLAYER 5-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.10.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Aaron Holmes</h3>
-          <p>1B</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.22.png" alt="Number 22" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Kris Kaufman*</h3>
+              <p>2B</p>
+            </div>
           </article>
 
-<!--PLAYER 6-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.39.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Braeden Hudder</h3>
-          <p>OF</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.28.png" alt="Number 28" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Jeff Klipp</h3>
+              <p>OF</p>
+            </div>
           </article>
 
-<!--PLAYER 7-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.22.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Kris Kaufman*</h3>
-          <p>2B</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.09.png" alt="Number 9" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Phil Morelli*</h3>
+              <p>OF</p>
+            </div>
           </article>
 
-<!--PLAYER 8-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.28.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Jeff Klipp</h3>
-          <p>OF</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.04.png" alt="Number 4" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Phil Nemanic*</h3>
+              <p>3B</p>
+            </div>
           </article>
 
-<!--PLAYER 9-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.09.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Phil Morelli*</h3>
-          <p>OF</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.07.png" alt="Number 7" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Tim Priess*</h3>
+              <p>OF</p>
+            </div>
           </article>
 
-<!--PLAYER 10-->
-
           <article class="player">
-          <span class="brand-mark"><img src="frozenrope.04.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Phil Nemanic*</h3>
-          <p>3B</p>
-          </div>
-          </article>
-
-<!--PLAYER 11-->
-
-          <article class="player">
-          <span class="brand-mark"><img src="frozenrope.07.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Tim Priess*</h3>
-          <p>OF</p>
-          </div>
-          </article>
-
-<!--PLAYER 12-->
-
-          <article class="player">
-          <span class="brand-mark"><img src="frozenrope.01.png" alt="Frozen Rope"></span>
-          <div class="player-info">
-          <h3 style="font-weight: bold; color: #0b0b0b;">Mike Scott*</h3>
-          <p>OF</p>
-          </div>
+            <span class="player-number">
+              <img src="frozenrope.01.png" alt="Number 1" loading="lazy" decoding="async" />
+            </span>
+            <div class="player-info">
+              <h3 class="player-name">Mike Scott*</h3>
+              <p>OF</p>
+            </div>
           </article>
         </div>
       </section>
 
-<!--UPDATE SECTION * UPDATE SECTION * UPDATE SECTION -->
-
-      <section class="section updates-section" id="updates">
+      <section class="section updates-section" id="updates" aria-labelledby="updates-heading">
         <div class="section-heading">
-          <div><p class="eyebrow">From the dugout</p><h2>Team updates</h2></div>
+          <div>
+            <p class="eyebrow">From the dugout</p>
+            <h2 id="updates-heading">Team Updates</h2>
+          </div>
         </div>
+
         <div class="updates-grid">
           <article class="update lead-update">
-
-<!--EDIT UPDATE 1 HERE-->
-
             <p class="update-date">AUGUST 6, 2026</p>
             <h3>News Alpha</h3>
             <p>I like to rock n' roll all night and *part* of every day. I usually have errands... I can only rock from like 1-3.</p>
           </article>
+
           <article class="update">
-
-<!--EDIT UPDATE 2 HERE-->
-
             <p class="update-date">AUGUST 2, 2026</p>
             <h3>News Bravo</h3>
             <p>I like to rock n' roll all night and *part* of every day. I usually have errands... I can only rock from like 1-3.</p>
           </article>
+
           <article class="update">
-
-<!--EDIT UPDATE 3 HERE-->
-
             <p class="update-date">JULY 27, 2026</p>
             <h3>News Charlie</h3>
             <p>I like to rock n' roll all night and *part* of every day. I usually have errands... I can only rock from like 1-3.</p>
@@ -357,20 +414,15 @@
       </section>
 
       <section class="cta">
-
-<!--EDIT FOOTER EYEBROW HERE-->
-
         <p class="eyebrow">Rope it.</p>
-
-<!--EDIT FOOTER MESSAGE HERE-->
-
         <h2>See you at the field.</h2>
         <p>Questions for the team? Reach out to your captain or check the latest update before game night.</p>
       </section>
     </main>
 
-<!--EDIT FOOTER HERE-->
-
-    <footer><span>© 2026 Frozen Rope</span><span>Adult Men's Slowpitch Softball</span></footer>
+    <footer>
+      <span>© 2026 Frozen Rope Softball Club</span>
+      <span>Adult Men's Slowpitch Softball · Carson City, Nevada</span>
+    </footer>
   </body>
 </html>

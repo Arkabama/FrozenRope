@@ -8,12 +8,6 @@
   <title>Contact | Frozen Rope Softball Club</title>
   <link rel="icon" type="image/png" href="/frozenrope.logoalt.png" />
   <link rel="stylesheet" href="/styles.css" />
-  <style>
-    .contact-card .button-secondary,
-    .contact-card .button-secondary:hover {
-      color: var(--black);
-    }
-  </style>
   <script src="/site.js" defer></script>
 </head>
 <body>
@@ -30,7 +24,7 @@
 
     <section class="content-section">
       <div class="contact-grid">
-        <form class="contact-form" data-contact-form>
+        <form class="contact-form" data-contact-form aria-describedby="contact-form-note">
           <p class="eyebrow">Send an Email</p>
           <h2>Contact Frozen Rope</h2>
           <div class="form-grid">
@@ -40,7 +34,8 @@
             <div class="form-field full"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
             <div class="form-field full"><button class="button" type="submit">Compose Email</button></div>
           </div>
-          <p class="form-note">Clicking the button opens your device's email application with the message addressed and filled in. No message is stored by this website.</p>
+          <p class="form-note" id="contact-form-note">Compose Email opens your device\'s email application with the message addressed and filled in. No message is stored by this website.</p>
+          <p class="form-status" data-contact-status role="status" aria-live="polite"></p>
         </form>
 
         <aside class="contact-card">

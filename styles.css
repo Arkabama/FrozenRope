@@ -123,6 +123,22 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
     -1px 1px 0 var(--ice-white),
     1px 1px 0 var(--ice-white);
 }
+.hero-title-hof {
+  color: #0b1118;
+  background: linear-gradient(180deg, #35414c 0%, #090d12 34%, #18222c 62%, #020304 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px #f4f7fa;
+  paint-order: stroke fill;
+  text-shadow:
+    -3px -3px 0 #9a6400,
+    3px -3px 0 #f0b429,
+    -3px 3px 0 #9a6400,
+    3px 3px 0 #f0b429,
+    0 0 9px rgba(240, 180, 41, .72),
+    0 10px 22px rgba(0, 0, 0, .78);
+}
 .page-hero p:last-child { max-width: 720px; margin-bottom: 0; color: var(--light-gray); font-size: clamp(16px, 2vw, 20px); }
 .eyebrow {
   margin: 0 0 11px;

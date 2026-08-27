@@ -1,0 +1,63 @@
+name: Finalize Frozen Rope logo update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/finalize-logo-update.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Normalize alternate primary logo
+        run: |
+          python -m pip install --quiet pillow
+          python <<'PY'
+          from PIL import Image
+          import numpy as np
+
+          path = 'frozenrope.logomain.02.png'
+          img = Image.open(path).convert('RGBA')
+          a = np.asarray(img.getchannel('A'))
+
+          # Ignore near-transparent edge pixels when identifying the visible mark.
+          ys, xs = np.where(a >= 10)
+          if len(xs) and len(ys):
+              box = (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
+              img = img.crop(box)
+
+          # Match the corrected production canvas and visual height supplied for the site.
+          img = img.resize((1524, 728), Image.Resampling.LANCZOS)
+          img.save(path, optimize=True)
+          PY
+
+      - name: Refresh home-page logo references
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace('https://frozenrope.org/frozenrope.logomain.01.png"', 'https://frozenrope.org/frozenrope.logomain.01.png?v=20260827"')
+          s = s.replace('src="/frozenrope.logomain.01.png"', 'src="/frozenrope.logomain.01.png?v=20260827"')
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit finalized assets
+        run: |
+          rm -f .github/workflows/finalize-logo-update.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Finalize Frozen Rope home page logos"
+            git push
+          fi

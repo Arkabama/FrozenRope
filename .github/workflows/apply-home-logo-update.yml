@@ -48,26 +48,14 @@ jobs:
 
           page = Path("index.html")
           html = page.read_text(encoding="utf-8")
-          html = re.sub(
-              r'frozenrope\.logomain\.01\.png(?:\?v=[^"]*)?',
-              'frozenrope.logomain.01.png?v=20260827b',
-              html,
-          )
-          html = re.sub(
-              r'src="/frozenrope\.logomain\.(?:02|03)\.png(?:\?v=[^"]*)?"',
-              'src="/frozenrope.logomain.02.png?v=20260827b"',
-              html,
-          )
+          html = re.sub(r'frozenrope\.logomain\.01\.png(?:\?v=[^"]*)?', 'frozenrope.logomain.01.png?v=20260827b', html)
+          html = re.sub(r'src="/frozenrope\.logomain\.(?:02|03)\.png(?:\?v=[^"]*)?"', 'src="/frozenrope.logomain.02.png?v=20260827b"', html)
           page.write_text(html, encoding="utf-8")
 
           stylesheet = Path("styles.css")
           css = stylesheet.read_text(encoding="utf-8")
-          old = """.hero-logo { display: block; width: min(650px, 100%); margin: 22px 0 26px; }
-.home-companion-logo { display: grid; place-items: center; }
-.home-companion-logo img { display: block; width: min(360px, 100%); }"""
-          new = """.hero-logo { display: block; width: min(360px, 100%); margin: 22px auto 26px; }
-.home-companion-logo { display: grid; place-items: center; }
-.home-companion-logo img { display: block; width: min(360px, 100%); }"""
+          old = ".hero-logo { display: block; width: min(650px, 100%); margin: 22px 0 26px; }\n.home-companion-logo { display: grid; place-items: center; }\n.home-companion-logo img { display: block; width: min(360px, 100%); }"
+          new = ".hero-logo { display: block; width: min(360px, 100%); margin: 22px auto 26px; }\n.home-companion-logo { display: grid; place-items: center; }\n.home-companion-logo img { display: block; width: min(360px, 100%); }"
           if old not in css:
               raise SystemExit("Expected Home page logo CSS was not found")
           stylesheet.write_text(css.replace(old, new, 1), encoding="utf-8")

@@ -268,9 +268,12 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 .form-field input, .form-field textarea { width: 100%; padding: 12px 13px; color: var(--black); background: var(--white); border: 1px solid #aaa; border-radius: 3px; }
 .form-field textarea { min-height: 170px; resize: vertical; }
 .form-note { margin: 16px 0 0; color: var(--gray); font-size: 12px; }
+.form-status { min-height: 1.5em; margin: 8px 0 0; color: var(--dark-gray); font-size: 12px; font-weight: 700; }
 .contact-card { color: var(--white); background: var(--black); border-color: var(--black); }
 .contact-card h2 { font-size: 34px; }
 .contact-card a { color: var(--ice-blue); font-weight: 900; word-break: break-word; }
+.contact-card .button-secondary,
+.contact-card .button-secondary:hover { color: var(--black); }
 
 /* Shared CTA + footer */
 .site-cta { padding: 60px 24px; text-align: center; color: var(--white); background: var(--black); border-top: 5px solid var(--red); }

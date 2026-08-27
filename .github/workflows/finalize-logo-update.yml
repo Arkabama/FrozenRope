@@ -23,16 +23,14 @@ jobs:
           python -m pip install --quiet pillow
           python <<'PY'
           from PIL import Image
-          import numpy as np
 
           path = 'frozenrope.logomain.02.png'
           img = Image.open(path).convert('RGBA')
-          a = np.asarray(img.getchannel('A'))
 
           # Ignore near-transparent edge pixels when identifying the visible mark.
-          ys, xs = np.where(a >= 10)
-          if len(xs) and len(ys):
-              box = (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
+          alpha = img.getchannel('A').point(lambda p: 255 if p >= 10 else 0)
+          box = alpha.getbbox()
+          if box:
               img = img.crop(box)
 
           # Match the corrected production canvas and visual height supplied for the site.

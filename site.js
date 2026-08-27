@@ -2,6 +2,10 @@
   const toggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.site-nav');
 
+  document.querySelectorAll('.brand-mark img').forEach((img) => {
+    img.src = '/frsci-logo-header.png';
+  });
+
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
       const open = nav.classList.toggle('is-open');

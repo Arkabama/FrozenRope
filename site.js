@@ -24,6 +24,7 @@
 
   const contactForm = document.querySelector('[data-contact-form]');
   if (contactForm) {
+    const contactStatus = contactForm.querySelector('[data-contact-status]');
     contactForm.addEventListener('submit', (event) => {
       event.preventDefault();
 
@@ -40,7 +41,15 @@
         message
       ].join('\n');
 
-      window.location.href = `mailto:contact@frozenrope.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailtoUrl = `mailto:contact@frozenrope.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+      if (contactStatus) {
+        contactStatus.textContent = 'Opening your email application… If nothing happens, email contact@frozenrope.org directly.';
+      }
+
+      window.setTimeout(() => {
+        window.location.href = mailtoUrl;
+      }, 100);
     });
   }
 })();

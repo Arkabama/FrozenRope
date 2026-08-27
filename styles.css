@@ -183,7 +183,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 }
 .home-intro { max-width: 680px; }
 .home-intro .intro { color: var(--light-gray); font-size: clamp(17px, 2vw, 22px); font-weight: 700; }
-.hero-logo { display: block; width: min(650px, 100%); margin: 22px 0 26px; }
+.hero-logo { display: block; width: min(360px, 100%); margin: 22px auto 26px; }
 .home-companion-logo { display: grid; place-items: center; }
 .home-companion-logo img { display: block; width: min(360px, 100%); }
 .next-game {

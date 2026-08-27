@@ -245,6 +245,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 .bye-game { background: #f0f0f0; }
 
 /* Roster */
+.roster-page main { background: var(--ice-blue-light); }
 .roster-wrap { padding: 1px; background: var(--ice-blue-light); }
 .roster-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; }
 .player { min-height: 145px; display: flex; align-items: center; gap: 14px; padding: 19px; background: var(--ice-blue-light); }

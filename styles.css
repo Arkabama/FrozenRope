@@ -1,6 +1,9 @@
 :root {
-  --black: #0b0b0b;
-  --red: #d71920;
+  --ice-black: #0b0b0b;
+  --ice-red: #d71920;
+  --ice-white: #f7fbff;
+  --black: var(--ice-black);
+  --red: var(--ice-red);
   --dark-red: #a90f15;
   --gray: #666;
   --dark-gray: #303030;
@@ -45,7 +48,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: var(--red);
+  background: var(--ice-red);
   border-bottom: 1px solid var(--dark-red);
   box-shadow: 0 2px 16px rgba(0,0,0,.18);
 }
@@ -111,6 +114,15 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
   padding: clamp(48px, 7vw, 84px) 0;
 }
 .page-hero h1 { margin: 0 0 12px; font-size: clamp(46px, 7vw, 82px); letter-spacing: -.045em; line-height: .95; }
+.hero-title-ice-white { color: var(--ice-white); }
+.hero-title-ice-black {
+  color: var(--ice-black);
+  text-shadow:
+    -1px -1px 0 var(--ice-white),
+    1px -1px 0 var(--ice-white),
+    -1px 1px 0 var(--ice-white),
+    1px 1px 0 var(--ice-white);
+}
 .page-hero p:last-child { max-width: 720px; margin-bottom: 0; color: var(--light-gray); font-size: clamp(16px, 2vw, 20px); }
 .eyebrow {
   margin: 0 0 11px;
@@ -164,15 +176,20 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
   width: min(var(--content), calc(100% - 48px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(320px, .8fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(38px, 6vw, 78px);
+  gap: clamp(24px, 3vw, 44px);
   padding: clamp(50px, 7vw, 88px) 0;
 }
 .home-intro { max-width: 680px; }
 .home-intro .intro { color: var(--light-gray); font-size: clamp(17px, 2vw, 22px); font-weight: 700; }
 .hero-logo { display: block; width: min(650px, 100%); margin: 22px 0 26px; }
+.home-companion-logo { display: grid; place-items: center; }
+.home-companion-logo img { display: block; width: min(360px, 100%); }
 .next-game {
+  width: 100%;
+  max-width: 380px;
+  justify-self: center;
   padding: clamp(26px, 3vw, 38px);
   border: 2px solid var(--red);
   background: linear-gradient(145deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
@@ -220,7 +237,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 .bye-game { background: #f0f0f0; }
 
 /* Roster */
-.roster-wrap { padding: 1px; background: rgba(11,11,11,.16); }
+.roster-wrap { padding: 1px; background: var(--ice-blue-light); }
 .roster-grid { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; }
 .player { min-height: 145px; display: flex; align-items: center; gap: 14px; padding: 19px; background: var(--ice-blue-light); }
 .player-number { width: 76px; height: 62px; flex: 0 0 76px; display: grid; place-items: center; }

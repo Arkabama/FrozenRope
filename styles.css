@@ -134,8 +134,6 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
   text-shadow:
     -3px -3px 0 #9a6400,
     3px -3px 0 #f0b429,
-    -3px 3px 0 #9a6400,
-    3px 3px 0 #f0b429,
     0 0 9px rgba(240, 180, 41, .72),
     0 10px 22px rgba(0, 0, 0, .78);
 }

@@ -1,0 +1,83 @@
+name: Apply updated Frozen Rope home logos
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-home-logo-update.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reconstruct and verify logo assets
+        run: |
+          cat .github/logo-update/logomain01.part* | base64 --decode > frozenrope.logomain.01.png
+          cat .github/logo-update/logomain02.part* | base64 --decode > frozenrope.logomain.02.png
+          test "$(sha256sum frozenrope.logomain.01.png | awk '{print $1}')" = "1d6a9cb4fa005065d9106f31627e8f3dd5f2b8abaaaf2821557aa61b27bc78e5"
+          test "$(sha256sum frozenrope.logomain.02.png | awk '{print $1}')" = "b9e497beb982365dd5b2303d48a4924213171b4c4c72976b2df482665e1622fe"
+
+      - name: Verify matching PNG dimensions
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import struct
+
+          for name in ("frozenrope.logomain.01.png", "frozenrope.logomain.02.png"):
+              data = Path(name).read_bytes()
+              if data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
+                  raise SystemExit(f"{name} is not a valid PNG")
+              width, height = struct.unpack(">II", data[16:24])
+              if (width, height) != (1501, 647):
+                  raise SystemExit(f"{name} is {width}x{height}, expected 1501x647")
+          PY
+
+      - name: Update Home page references and equal sizing
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import re
+
+          page = Path("index.html")
+          html = page.read_text(encoding="utf-8")
+          html = re.sub(
+              r'frozenrope\.logomain\.01\.png(?:\?v=[^"]*)?',
+              'frozenrope.logomain.01.png?v=20260827b',
+              html,
+          )
+          html = re.sub(
+              r'src="/frozenrope\.logomain\.(?:02|03)\.png(?:\?v=[^"]*)?"',
+              'src="/frozenrope.logomain.02.png?v=20260827b"',
+              html,
+          )
+          page.write_text(html, encoding="utf-8")
+
+          stylesheet = Path("styles.css")
+          css = stylesheet.read_text(encoding="utf-8")
+          old = """.hero-logo { display: block; width: min(650px, 100%); margin: 22px 0 26px; }
+.home-companion-logo { display: grid; place-items: center; }
+.home-companion-logo img { display: block; width: min(360px, 100%); }"""
+          new = """.hero-logo { display: block; width: min(360px, 100%); margin: 22px auto 26px; }
+.home-companion-logo { display: grid; place-items: center; }
+.home-companion-logo img { display: block; width: min(360px, 100%); }"""
+          if old not in css:
+              raise SystemExit("Expected Home page logo CSS was not found")
+          stylesheet.write_text(css.replace(old, new, 1), encoding="utf-8")
+          PY
+
+      - name: Commit completed update
+        run: |
+          rm -rf .github/logo-update .github/workflows/apply-home-logo-update.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Update matched Home page logo pair"
+          git push

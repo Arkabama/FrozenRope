@@ -1,10 +1,13 @@
-const CACHE_NAME = 'frozen-rope-v1';
+const CACHE_NAME = 'frozen-rope-v2';
 const CORE_ASSETS = [
   '/',
-  '/styles.css',
-  '/site.js',
-  '/site.webmanifest',
+  '/404.html',
+  '/styles.css?v=20260828b',
+  '/site.js?v=20260828b',
+  '/site.webmanifest?v=20260828a',
   '/frsci-logo-header.png',
+  '/assets/web/frozenrope-primary.webp',
+  '/assets/web/fr-mark.webp',
   '/icons/icon-192.png',
   '/icons/icon-512.png',
   '/icons/maskable-icon-512.png',
@@ -35,31 +38,34 @@ self.addEventListener('fetch', (event) => {
 
   if (request.method !== 'GET' || url.origin !== self.location.origin) return;
 
-  event.respondWith((async () => {
-    try {
-      const response = await fetch(request);
-      const shouldCache = response.ok && (
-        ['document', 'script', 'style', 'manifest'].includes(request.destination) ||
-        url.pathname.startsWith('/icons/') ||
-        url.pathname === '/frsci-logo-header.png'
-      );
-
-      if (shouldCache) {
-        const cache = await caches.open(CACHE_NAME);
-        cache.put(request, response.clone());
-      }
-
-      return response;
-    } catch (error) {
-      const cached = await caches.match(request, { ignoreSearch: true });
-      if (cached) return cached;
-
-      if (request.mode === 'navigate') {
-        const home = await caches.match('/');
-        if (home) return home;
-      }
-
-      throw error;
+  const fetchAndCache = async () => {
+    const response = await fetch(request);
+    if (response.ok) {
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(request, response.clone());
     }
-  })());
+    return response;
+  };
+
+  const isStaticAsset = ['image', 'script', 'style', 'manifest'].includes(request.destination) ||
+    url.pathname.startsWith('/assets/web/') ||
+    url.pathname.startsWith('/icons/') ||
+    url.pathname === '/frsci-logo-header.png';
+
+  if (isStaticAsset) {
+    event.respondWith(
+      caches.match(request).then((cached) => cached || fetchAndCache())
+    );
+    return;
+  }
+
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetchAndCache().catch(async () =>
+        (await caches.match(request)) ||
+        (await caches.match('/404.html')) ||
+        caches.match('/')
+      )
+    );
+  }
 });

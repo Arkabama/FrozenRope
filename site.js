@@ -64,7 +64,7 @@
     dialog.innerHTML = `
       <form class="install-dialog-card" method="dialog">
         <button class="install-dialog-close" type="submit" aria-label="Close installation instructions">×</button>
-        <img class="install-dialog-icon" src="${icon}" alt="" />
+        <img class="install-dialog-icon" src="${icon}" alt="" width="76" height="76" />
         <p class="eyebrow">Home Screen Shortcut</p>
         <h2 id="install-dialog-title">${title}</h2>
         ${steps}
@@ -94,7 +94,7 @@
     installButton.className = 'install-link';
     installButton.type = 'button';
     installButton.innerHTML = `
-      <img src="${isIos ? '/icons/apple-touch-icon.png' : '/icons/icon-192.png'}" alt="" />
+      <img src="${isIos ? '/icons/apple-touch-icon.png' : '/icons/icon-192.png'}" alt="" width="26" height="26" />
       <span>${isIos ? 'Add to iPhone' : 'Install on Android'}</span>
     `;
     footerLinks.appendChild(installButton);

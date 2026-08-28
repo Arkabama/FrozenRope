@@ -1,8 +1,8 @@
-const CACHE_NAME = 'frozen-rope-v2';
+const CACHE_NAME = 'frozen-rope-v3';
 const CORE_ASSETS = [
   '/',
   '/404.html',
-  '/styles.css?v=20260828b',
+  '/styles.css?v=20260828c',
   '/site.js?v=20260828b',
   '/site.webmanifest?v=20260828a',
   '/frsci-logo-header.png',

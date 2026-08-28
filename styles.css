@@ -115,23 +115,6 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 }
 .page-hero h1 { margin: 0 0 12px; font-size: clamp(46px, 7vw, 82px); letter-spacing: -.045em; line-height: .95; }
 .hero-title-ice-white { color: var(--ice-white); }
-.hero-title-ice-black {
-  color: var(--ice-black);
-  text-shadow:
-    -1px -1px 0 var(--ice-white),
-    1px -1px 0 var(--ice-white),
-    -1px 1px 0 var(--ice-white),
-    1px 1px 0 var(--ice-white);
-}
-.hero-title-hof {
-  color: #0b1118;
-  background: linear-gradient(180deg, #35414c 0%, #090d12 34%, #18222c 62%, #020304 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 2px #f4f7fa;
-  paint-order: stroke fill;
-}
 .page-hero p:last-child { max-width: 720px; margin-bottom: 0; color: var(--light-gray); font-size: clamp(16px, 2vw, 20px); }
 .eyebrow {
   margin: 0 0 11px;

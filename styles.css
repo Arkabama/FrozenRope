@@ -305,6 +305,55 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
 .footer-links a { text-decoration: none; }
 .footer-links a:hover { text-decoration: underline; }
+.install-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0;
+  color: var(--black);
+  background: transparent;
+  border: 0;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+.install-link:hover span { text-decoration: underline; }
+.install-link img { width: 26px; height: 26px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,.18); }
+.install-dialog {
+  width: min(420px, calc(100% - 32px));
+  max-width: none;
+  padding: 0;
+  color: var(--black);
+  background: var(--white);
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.35);
+}
+.install-dialog::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(3px); }
+.install-dialog-card { position: relative; padding: 30px; }
+.install-dialog-icon { display: block; width: 76px; height: 76px; margin: 0 0 18px; border-radius: 17px; box-shadow: 0 8px 20px rgba(0,0,0,.22); }
+.install-dialog h2 { margin-bottom: 18px; font-size: 30px; line-height: 1.05; }
+.install-dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: var(--dark-gray);
+  background: var(--soft-gray);
+  border: 0;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+.install-steps { margin: 0 0 18px; padding-left: 22px; }
+.install-steps li { margin-bottom: 10px; padding-left: 4px; }
+.install-dialog-note { margin-bottom: 20px; color: var(--gray); font-size: 12px; }
 
 @media (max-width: 1040px) {
   .header-inner { width: min(var(--content), calc(100% - 28px)); }

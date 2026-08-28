@@ -183,11 +183,11 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
   width: min(var(--content), calc(100% - 48px));
   margin: 0 auto;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr);
   grid-template-areas:
-    "intro game ."
-    "primary game companion"
-    "actions game .";
+    "intro game"
+    "primary game"
+    "actions game";
   align-items: center;
   column-gap: clamp(24px, 3vw, 44px);
   row-gap: 22px;
@@ -198,16 +198,6 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 .home-intro .intro { margin-bottom: 0; color: var(--light-gray); font-size: clamp(17px, 2vw, 22px); font-weight: 700; }
 .hero-logo { grid-area: primary; justify-self: center; display: block; width: min(360px, 100%); margin: 0; }
 .home-intro .button-row { grid-area: actions; align-self: start; }
-.home-companion-logo { display: none; }
-@media (min-width: 821px) {
-  .home-companion-logo {
-    grid-area: companion;
-    display: block;
-    width: min(360px, 100%);
-    aspect-ratio: 719 / 310;
-    background: url('/assets/web/frozenrope-companion.webp') center / contain no-repeat;
-  }
-}
 .next-game {
   grid-area: game;
   width: 100%;
@@ -405,7 +395,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
   .site-nav a { text-align: center; }
   .home-hero-inner {
     grid-template-columns: 1fr;
-    grid-template-areas: "intro" "primary" "actions" "game" "companion";
+    grid-template-areas: "intro" "primary" "actions" "game";
     row-gap: 24px;
   }
   .hof-intro, .contact-grid { grid-template-columns: 1fr; }

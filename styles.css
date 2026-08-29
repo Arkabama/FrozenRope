@@ -196,7 +196,7 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 .home-intro { display: contents; }
 .home-intro-copy { grid-area: intro; align-self: end; max-width: 680px; }
 .home-intro .intro { margin-bottom: 0; color: var(--light-gray); font-size: clamp(17px, 2vw, 22px); font-weight: 700; }
-.hero-logo { grid-area: primary; justify-self: center; display: block; width: min(360px, 100%); margin: 0; }
+.hero-logo { grid-area: primary; justify-self: start; display: block; width: min(500px, 100%); height: auto; margin: 0; }
 .home-intro .button-row { grid-area: actions; align-self: start; }
 .next-game {
   grid-area: game;

@@ -22,6 +22,86 @@
     node.textContent = new Date().getFullYear();
   });
 
+  const nextGameCard = document.querySelector('[data-next-game]');
+
+  if (nextGameCard) {
+    const dateNode = nextGameCard.querySelector('[data-next-game-date]');
+    const opponentNode = nextGameCard.querySelector('[data-next-game-opponent]');
+    const detailsNode = nextGameCard.querySelector('[data-next-game-details]');
+
+    const getCarsonCityDate = () => {
+      const parts = new Intl.DateTimeFormat('en-US', {
+        timeZone: 'America/Los_Angeles',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).formatToParts(new Date());
+      const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+      return `${values.year}-${values.month}-${values.day}`;
+    };
+
+    const formatGameDate = (date, time) => {
+      const localDate = new Date(`${date}T12:00:00`);
+      const formattedDate = new Intl.DateTimeFormat('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric'
+      }).format(localDate).toUpperCase();
+      return `${formattedDate} · ${time}`;
+    };
+
+    const updateNextGame = (game) => {
+      if (!dateNode || !opponentNode || !detailsNode) return;
+
+      if (!game) {
+        dateNode.textContent = '2027 SEASON COMPLETE';
+        opponentNode.textContent = 'No Upcoming Games';
+        detailsNode.textContent = 'Check back for the next Frozen Rope schedule.';
+        return;
+      }
+
+      dateNode.textContent = formatGameDate(game.date, game.time);
+      opponentNode.textContent = game.opponent;
+      detailsNode.replaceChildren();
+      detailsNode.append(document.createTextNode(game.location));
+      detailsNode.append(document.createElement('br'));
+      detailsNode.append(document.createTextNode(`${game.field} · Carson City, Nevada`));
+    };
+
+    fetch('/schedule/', { cache: 'no-store' })
+      .then((response) => {
+        if (!response.ok) throw new Error('Schedule unavailable');
+        return response.text();
+      })
+      .then((html) => {
+        const schedule = new DOMParser().parseFromString(html, 'text/html');
+        const today = getCarsonCityDate();
+        const games = Array.from(schedule.querySelectorAll('.game-card:not(.bye-game)'))
+          .map((card) => {
+            const date = card.querySelector('time')?.getAttribute('datetime') || '';
+            const matchup = card.querySelector('h3')?.textContent.trim() || '';
+            const venueDetails = card.querySelector('h3 + p')?.textContent.trim() || '';
+            const time = card.querySelector('.game-time')?.textContent.trim() || '';
+            const [venue = '', field = 'Field TBD'] = venueDetails.split('·').map((value) => value.trim());
+
+            return {
+              date,
+              time,
+              opponent: matchup.replace(/^@\s+|^vs\s+/i, ''),
+              location: venue === 'Centennial Park' ? 'JohnD Winters Centennial Park' : venue,
+              field
+            };
+          })
+          .filter((game) => game.date && game.time && game.opponent && game.date >= today)
+          .sort((a, b) => a.date.localeCompare(b.date));
+
+        updateNextGame(games[0]);
+      })
+      .catch(() => {
+        // Keep the server-rendered game details as a reliable fallback.
+      });
+  }
+
   const userAgent = navigator.userAgent || '';
   const isIos = /iPad|iPhone|iPod/i.test(userAgent) ||
     (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);

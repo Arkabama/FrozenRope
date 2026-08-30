@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-title" content="Frozen Rope" />
   <link rel="stylesheet" href="/styles.css?v=20260829a" />
-  <script src="/site.js?v=20260828b" defer></script>
+  <script src="/site.js?v=20260830a" defer></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -82,11 +82,11 @@
           <img class="hero-logo" src="/assets/web/frozenrope-primary.webp?v=20260828b" alt="Frozen Rope Softball" width="719" height="310" fetchpriority="high" />
         </div>
 
-        <aside class="next-game" aria-label="Next game">
+        <aside class="next-game" aria-label="Next game" data-next-game aria-live="polite">
           <p class="eyebrow">Next Game</p>
-          <p class="game-date">APRIL 27, 2027 · 6:30 PM</p>
-          <h2>Opponent TBD</h2>
-          <p>JohnD Winters Centennial Park<br />Field TBD · Carson City, Nevada</p>
+          <p class="game-date" data-next-game-date>APRIL 27, 2027 · 6:30 PM</p>
+          <h2 data-next-game-opponent>Opponent TBD</h2>
+          <p data-next-game-details>JohnD Winters Centennial Park<br />Field TBD · Carson City, Nevada</p>
         </aside>
 
       </div>

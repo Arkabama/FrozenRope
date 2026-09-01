@@ -1,4 +1,4 @@
-const CACHE_NAME = 'frozen-rope-v6';
+const CACHE_NAME = 'frozen-rope-v7';
 const CORE_ASSETS = [
   '/',
   '/404.html',

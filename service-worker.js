@@ -1,17 +1,17 @@
-const CACHE_NAME = 'frozen-rope-v7';
+const CACHE_NAME = 'frozen-rope-v8';
 const CORE_ASSETS = [
   '/',
   '/404.html',
   '/styles.css?v=20260828d',
-  '/site.js?v=20260830a',
-  '/site.webmanifest?v=20260828a',
+  '/site.js?v=20260901a',
+  '/site.webmanifest?v=20260901a',
   '/frsci-logo-header.png',
   '/assets/web/frozenrope-primary.webp?v=20260828b',
   '/assets/web/fr-mark.webp',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png',
-  '/icons/maskable-icon-512.png',
-  '/icons/apple-touch-icon.png'
+  '/icons/icon-192.png?v=20260901a',
+  '/icons/icon-512.png?v=20260901a',
+  '/icons/maskable-icon-512.png?v=20260901a',
+  '/icons/apple-touch-icon.png?v=20260901a'
 ];
 
 self.addEventListener('install', (event) => {

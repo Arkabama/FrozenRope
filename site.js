@@ -122,8 +122,8 @@
       ? 'Add Frozen Rope to your iPhone'
       : 'Add Frozen Rope to your Android';
     const icon = isAppleGuide
-      ? '/icons/apple-touch-icon.png'
-      : '/icons/icon-192.png';
+      ? '/icons/apple-touch-icon.png?v=20260901a'
+      : '/icons/icon-192.png?v=20260901a';
     const steps = isAppleGuide
       ? `
         <ol class="install-steps">
@@ -174,7 +174,7 @@
     installButton.className = 'install-link';
     installButton.type = 'button';
     installButton.innerHTML = `
-      <img src="${isIos ? '/icons/apple-touch-icon.png' : '/icons/icon-192.png'}" alt="" width="26" height="26" />
+      <img src="${isIos ? '/icons/apple-touch-icon.png?v=20260901a' : '/icons/icon-192.png?v=20260901a'}" alt="" width="26" height="26" />
       <span>${isIos ? 'Add to iPhone' : 'Install on Android'}</span>
     `;
     footerLinks.appendChild(installButton);

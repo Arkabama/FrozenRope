@@ -254,7 +254,11 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
   box-shadow: 0 7px 20px rgba(0,0,0,.16);
 }
 .practice-game div p:last-child { color: var(--light-gray); }
-.bye-game { background: #f0f0f0; }
+.bye-game {
+  background: linear-gradient(135deg,var(--light-gray),var(--soft-gray));
+  border-color: #b9b9b9;
+  box-shadow: 0 6px 18px rgba(0,0,0,.08);
+}
 
 /* Roster */
 .roster-page main { background: var(--ice-blue-light); }

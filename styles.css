@@ -247,6 +247,13 @@ h1, h2, h3 { font-family: Georgia, "Times New Roman", serif; }
 .game-card h3 { margin: 4px 0; font-size: 21px; }
 .game-card div p:last-child { margin-bottom: 0; color: var(--gray); font-size: 12px; }
 .game-time { margin: 0; font-size: 13px; font-weight: 900; white-space: nowrap; }
+.practice-game {
+  color: var(--ice-white);
+  background: linear-gradient(135deg,var(--ice-black),var(--dark-gray));
+  border-color: #454545;
+  box-shadow: 0 7px 20px rgba(0,0,0,.16);
+}
+.practice-game div p:last-child { color: var(--light-gray); }
 .bye-game { background: #f0f0f0; }
 
 /* Roster */
